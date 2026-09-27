@@ -1,0 +1,24 @@
+{
+  "name": "QuizLab PAW — Planificarea aplicațiilor Web",
+  "short_name": "QuizLab PAW",
+  "description": "Teste grilă pentru cursul Planificarea aplicațiilor Web: 11 module, 1100 de întrebări și Examen 29.09.",
+  "lang": "ro",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f5f1",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
