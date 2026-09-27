@@ -1,0 +1,237 @@
+<div class="container">
+  <!-- ===== Hero ===== -->
+  <section class="hero fade-up">
+    <p class="eyebrow">Planificarea aplicațiilor Web · S.04.O.019</p>
+    <h1 class="hero__title">Pregătește-te pentru evaluare,<br />temă cu temă.</h1>
+    <p class="hero__lead muted">
+      Toate cele 18 teme ale cursului și caietul de sarcini, grupate în module. Alegi modulul, câte întrebări vrei și primești un test aleatoriu din
+      {{ totalQuestions }} de întrebări. Întrebările pe care le-ai văzut deja apar ultimele.
+    </p>
+
+    <dl class="stats">
+      <div>
+        <dt>Module</dt>
+        <dd>{{ modules.length }}</dd>
+      </div>
+      <div>
+        <dt>Întrebări</dt>
+        <dd>{{ totalQuestions }}</dd>
+      </div>
+      <div>
+        <dt>Teste date</dt>
+        <dd>{{ testsTaken() }}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ===== Test neterminat ===== -->
+  @if (ongoing(); as o) {
+    <section class="resume fade-up" [style.--accent]="o.module?.color">
+      <span class="module-tile" aria-hidden="true">{{ o.module?.short }}</span>
+      <div class="resume__text">
+        <strong>Ai un test neterminat la {{ o.module?.name }}</strong>
+        <span class="muted">{{ o.answered }} din {{ o.total }} întrebări răspunse</span>
+      </div>
+      <div class="resume__actions">
+        <button type="button" class="btn btn--ghost" (click)="discard()">Renunță</button>
+        <button type="button" class="btn btn--primary" (click)="resume()">Continuă</button>
+      </div>
+    </section>
+  }
+
+  <!-- ===== Module ===== -->
+  <section aria-labelledby="modules-title">
+    <div class="section-head">
+      <h2 id="modules-title">Alege un modul</h2>
+      <a routerLink="/istoric" class="section-head__link">Vezi istoricul →</a>
+    </div>
+
+    <div class="grid">
+      @for (m of modules; track m.id; let i = $index) {
+        <button
+          type="button"
+          class="module-card fade-up"
+          [class.is-selected]="selected()?.id === m.id"
+          [style.--accent]="m.color"
+          [style.animation-delay.ms]="i * 50"
+          [attr.aria-pressed]="selected()?.id === m.id"
+          (click)="select(m)"
+        >
+          <div class="module-card__top">
+            <span class="module-tile" aria-hidden="true">{{ m.short }}</span>
+            @if (best(m) !== null) {
+              <span
+                class="badge"
+                [class.badge--success]="best(m)! >= 80"
+                [class.badge--warning]="best(m)! >= 50 && best(m)! < 80"
+                [class.badge--danger]="best(m)! < 50"
+                >Record {{ best(m) }}%</span
+              >
+            }
+          </div>
+
+          <h3 class="module-card__title">{{ m.name }}</h3>
+          <p class="module-card__desc">{{ m.description }}</p>
+
+          <div class="module-card__meta">
+            <span>{{ m.questions.length }} întrebări</span>
+            <span aria-hidden="true">·</span>
+            <span>{{ attempts(m) }} {{ attempts(m) === 1 ? 'test' : 'teste' }}</span>
+          </div>
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- ===== Examene ===== -->
+  <section class="exams" aria-labelledby="exams-title">
+    <div class="section-head">
+      <div>
+        <h2 id="exams-title">Examene</h2>
+        <p class="muted section-head__sub">Combină mai multe module; întrebările se împart egal între ele.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      @for (e of exams; track e.id; let i = $index) {
+        <button
+          type="button"
+          class="module-card exam-card fade-up"
+          [class.is-selected]="selected()?.id === e.id"
+          [style.--accent]="e.color"
+          [style.animation-delay.ms]="i * 50"
+          [attr.aria-pressed]="selected()?.id === e.id"
+          (click)="select(e)"
+        >
+          <div class="module-card__top">
+            <span class="module-tile" aria-hidden="true">{{ e.short }}</span>
+            @if (best(e) !== null) {
+              <span
+                class="badge"
+                [class.badge--success]="best(e)! >= 80"
+                [class.badge--warning]="best(e)! >= 50 && best(e)! < 80"
+                [class.badge--danger]="best(e)! < 50"
+                >Record {{ best(e) }}%</span
+              >
+            }
+          </div>
+
+          <h3 class="module-card__title">{{ e.name }}</h3>
+          <p class="module-card__desc">{{ e.description }}</p>
+
+          <p class="exam-card__label">Conține:</p>
+          <ul class="includes">
+            @for (id of e.includes; track id) {
+              @let part = findModule(id);
+              <li [style.--accent]="part?.color">{{ part?.name }}</li>
+            }
+          </ul>
+
+          <div class="module-card__meta">
+            <span>{{ e.includes?.length }} module · {{ e.questions.length }} întrebări</span>
+            <span aria-hidden="true">·</span>
+            <span>{{ attempts(e) }} {{ attempts(e) === 1 ? 'test' : 'teste' }}</span>
+          </div>
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- ===== Configurare test ===== -->
+  @if (selected(); as m) {
+    <section #setup class="setup card fade-up" [style.--accent]="m.color" aria-labelledby="setup-title">
+      <div class="setup__head">
+        <span class="module-tile" aria-hidden="true">{{ m.short }}</span>
+        <div>
+          <p class="eyebrow">{{ m.includes ? 'Examen nou' : 'Test nou' }}</p>
+          <h2 id="setup-title">{{ m.name }}</h2>
+        </div>
+      </div>
+
+      @if (m.includes) {
+        <ul class="includes includes--setup">
+          @for (id of m.includes; track id) {
+            @let part = findModule(id);
+            <li [style.--accent]="part?.color">{{ part?.name }}</li>
+          }
+        </ul>
+      }
+
+      <fieldset class="setup__field">
+        <legend>Câte întrebări vrei?</legend>
+        <div class="chips">
+          @for (n of presets(); track n) {
+            @if (n <= m.questions.length) {
+              <button
+                type="button"
+                class="chip"
+                [class.is-active]="count() === n"
+                (click)="setCount(n)"
+              >
+                {{ n }}
+              </button>
+            }
+          }
+          <label class="custom">
+            <span>Alt număr</span>
+            <input
+              type="number"
+              min="1"
+              [max]="m.questions.length"
+              [ngModel]="count()"
+              (ngModelChange)="setCount($event)"
+            />
+          </label>
+        </div>
+      </fieldset>
+
+      <input
+        class="range"
+        type="range"
+        min="1"
+        [max]="m.questions.length"
+        [ngModel]="count()"
+        (ngModelChange)="setCount($event)"
+        aria-label="Număr de întrebări"
+      />
+
+      <fieldset class="setup__field setup__field--timer">
+        <legend>Timp pentru fiecare întrebare</legend>
+        <div class="chips">
+          @for (t of timerOptions; track t) {
+            <button
+              type="button"
+              class="chip"
+              [class.is-active]="timeLimit() === t"
+              (click)="timeLimit.set(t)"
+            >
+              @if (t === 0) {
+                Fără limită
+              } @else {
+                ⏱ {{ t }}s
+              }
+            </button>
+          }
+        </div>
+        @if (timeLimit()) {
+          <p class="muted setup__note">Dacă nu răspunzi la timp, întrebarea se consideră greșită.</p>
+        }
+      </fieldset>
+
+      <div class="setup__footer">
+        <p class="muted setup__hint">
+          <strong>{{ count() }}</strong> întrebări din {{ m.questions.length }} ·
+          @if (perPart(); as pp) {
+            câte {{ pp }} din fiecare modul ·
+          }
+          {{ unseen(m) }} nevăzute încă ·
+          {{ timeLimit() ? 'max.' : '~' }} {{ estimate() }} min
+        </p>
+        <button type="button" class="btn btn--primary btn--lg" (click)="start()">
+          Începe testul
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+        </button>
+      </div>
+    </section>
+  }
+</div>

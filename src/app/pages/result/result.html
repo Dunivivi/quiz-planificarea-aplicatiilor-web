@@ -1,0 +1,116 @@
+@if (stats(); as st) {
+  <div class="container result" [style.--accent]="module()?.color">
+    <!-- ===== Rezumat ===== -->
+    <section class="summary card fade-up">
+      <app-score-ring [percent]="st.percent" [style.--ring-color]="st.grade.color">
+        corect
+      </app-score-ring>
+
+      <div class="summary__body">
+        <p class="eyebrow">{{ module()?.name }} · rezultat</p>
+        <h1 class="summary__title">{{ st.grade.title }}</h1>
+        <p class="muted">{{ st.grade.message }}</p>
+
+        <dl class="summary__stats">
+          <div>
+            <dt>Corecte</dt>
+            <dd class="is-success">{{ st.correct }}</dd>
+          </div>
+          <div>
+            <dt>Greșite</dt>
+            <dd class="is-danger">{{ st.wrong }}</dd>
+          </div>
+          <div>
+            <dt>Timp</dt>
+            <dd>{{ st.duration | duration }}</dd>
+          </div>
+        </dl>
+
+        <div class="summary__actions">
+          <button type="button" class="btn btn--primary" (click)="retry()">
+            Test nou · {{ st.total }} întrebări
+          </button>
+          <a routerLink="/" class="btn btn--secondary">Alt modul</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Scor pe module (doar la examene) ===== -->
+    @if (breakdown().length) {
+      <section class="breakdown card fade-up" aria-labelledby="breakdown-title">
+        <h2 id="breakdown-title">Scor pe module</h2>
+        @for (b of breakdown(); track b.module.id) {
+          <div class="breakdown__row" [style.--accent]="b.module.color">
+            <span class="breakdown__name">{{ b.module.name }}</span>
+            <div class="progress"><div class="progress__bar" [style.width.%]="b.percent"></div></div>
+            <span class="breakdown__score">{{ b.correct }}/{{ b.total }}</span>
+          </div>
+        }
+      </section>
+    }
+
+    <!-- ===== Recapitulare ===== -->
+    <section class="review" aria-labelledby="review-title">
+      <div class="review__head">
+        <h2 id="review-title">Recapitulare</h2>
+        <div class="chips" role="group" aria-label="Filtrează întrebările">
+          <button type="button" class="chip" [class.is-active]="filter() === 'all'" (click)="filter.set('all')">
+            Toate · {{ st.total }}
+          </button>
+          <button type="button" class="chip" [class.is-active]="filter() === 'wrong'" (click)="filter.set('wrong')">
+            Greșite · {{ st.wrong }}
+          </button>
+          <button type="button" class="chip" [class.is-active]="filter() === 'correct'" (click)="filter.set('correct')">
+            Corecte · {{ st.correct }}
+          </button>
+        </div>
+      </div>
+
+      @for (q of reviewed(); track q.number) {
+        <article class="review-item" [class.is-wrong]="q.picked !== q.correct">
+          <div class="review-item__head">
+            <span class="review-item__num">{{ q.number }}</span>
+            <div class="review-item__title">
+              @if (module()?.includes) {
+                @let src = findModule(q.source);
+                <span class="review-item__source" [style.--accent]="src?.color">{{ src?.name }}</span>
+              }
+              <h3>{{ q.question }}</h3>
+            </div>
+            @if (q.picked === q.correct) {
+              <span class="badge badge--success">Corect</span>
+            } @else if (q.picked === -1) {
+              <span class="badge badge--warning">⏱ Timp expirat</span>
+            } @else {
+              <span class="badge badge--danger">Greșit</span>
+            }
+          </div>
+
+          @if (q.code) {
+            <pre class="code-block"><code>{{ q.code }}</code></pre>
+          }
+
+          <ul class="answers">
+            @for (option of q.options; track $index; let i = $index) {
+              @if (i === q.correct || i === q.picked) {
+                <li [class.is-correct]="i === q.correct" [class.is-wrong]="i !== q.correct">
+                  <span class="answers__tag">{{ i === q.correct ? '✓' : '✕' }}</span>
+                  <span>{{ option }}</span>
+                  @if (i === q.picked) {
+                    <em>răspunsul tău</em>
+                  }
+                </li>
+              }
+            }
+          </ul>
+
+          <p class="review-item__explain">{{ q.explanation }}</p>
+        </article>
+      } @empty {
+        <p class="empty muted">
+          {{ filter() === 'wrong' ? 'Nicio greșeală — felicitări! 🎉' : 'Nicio întrebare aici.' }}
+        </p>
+      }
+    </section>
+  </div>
+}

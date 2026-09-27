@@ -1,0 +1,68 @@
+<div class="container history">
+  <header class="history__head fade-up">
+    <div>
+      <p class="eyebrow">Progresul tău</p>
+      <h1>Istoric</h1>
+    </div>
+
+    @if (history().length) {
+      @if (confirmClear()) {
+        <div class="confirm">
+          <span class="muted">Ștergi tot istoricul?</span>
+          <button type="button" class="btn btn--ghost" (click)="confirmClear.set(false)">Anulează</button>
+          <button type="button" class="btn btn--danger" (click)="clear()">Șterge</button>
+        </div>
+      } @else {
+        <button type="button" class="btn btn--secondary" (click)="confirmClear.set(true)">
+          Șterge istoricul
+        </button>
+      }
+    }
+  </header>
+
+  @if (history().length === 0) {
+    <div class="empty card fade-up">
+      <div class="empty__icon" aria-hidden="true">📝</div>
+      <h2>Încă nu ai dat niciun test</h2>
+      <p class="muted">Alege un modul și rezultatele tale vor apărea aici.</p>
+      <a routerLink="/" class="btn btn--primary">Alege un modul</a>
+    </div>
+  } @else {
+    <!-- ===== Rezumat pe module ===== -->
+    <section class="modules">
+      @for (item of perModule(); track item.module.id) {
+        <div class="module-stat fade-up" [style.--accent]="item.module.color">
+          <div class="module-stat__head">
+            <span class="module-tile module-tile--sm" aria-hidden="true">{{ item.module.short }}</span>
+            <strong>{{ item.module.name }}</strong>
+          </div>
+          <dl>
+            <div><dt>Teste</dt><dd>{{ item.attempts }}</dd></div>
+            <div><dt>Media</dt><dd>{{ item.avg }}%</dd></div>
+            <div><dt>Record</dt><dd>{{ item.best }}%</dd></div>
+          </dl>
+          <div class="progress"><div class="progress__bar" [style.width.%]="item.avg"></div></div>
+        </div>
+      }
+    </section>
+
+    <!-- ===== Lista testelor ===== -->
+    <section class="card list">
+      <h2 class="list__title">Toate testele</h2>
+      <ul>
+        @for (r of history(); track r.id) {
+          @let m = findModule(r.moduleId);
+          <li class="row" [style.--accent]="m?.color">
+            <span class="module-tile module-tile--sm" aria-hidden="true">{{ m?.short }}</span>
+            <div class="row__main">
+              <strong>{{ m?.name }}</strong>
+              <span class="muted">{{ r.date | date: 'd MMM y, HH:mm' }} · {{ r.durationSec | duration }}</span>
+            </div>
+            <span class="row__score">{{ r.correct }}/{{ r.total }}</span>
+            <span class="badge" [class]="levelClass(r.percent)">{{ r.percent }}%</span>
+          </li>
+        }
+      </ul>
+    </section>
+  }
+</div>
