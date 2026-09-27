@@ -118,9 +118,9 @@ export const EXAMS: QuizModule[] = [
     id: 'exam-29-09',
     name: 'Examen 29.09',
     short: '29.09',
-    description: 'Examen model: temele 1–6, de la Internet și HTTP până la caietul de sarcini.',
+    description: 'Examen model: temele 1–7, de la Internet și HTTP până la caietul de sarcini, prototip și machetă.',
     color: '#dc2626',
-    includes: ['internet-http', 'browsere-securitate', 'aplicatii-web', 'caiet-sarcini'],
+    includes: ['internet-http', 'browsere-securitate', 'aplicatii-web', 'caiet-sarcini', 'prototipare'],
   }),
   exam({
     id: 'exam-baze',

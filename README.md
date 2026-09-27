@@ -28,7 +28,7 @@ npm start          # http://localhost:4200
 
 Cam 70% din întrebări vin direct din prezentări, restul sunt suplimentare, la același nivel.
 
-**Evaluări** (întrebările se împart egal între module): **Examen 29.09** (temele 1–6, până la caietul de sarcini), Bazele Web, Planificarea, Designul, Lansarea și Examenul final (toate temele).
+**Evaluări** (întrebările se împart egal între module): **Examen 29.09** (temele 1–7: până la caietul de sarcini + prototipul, macheta și instrumentele de prototipare), Bazele Web, Planificarea, Designul, Lansarea și Examenul final (toate temele).
 
 Restul funcțiilor (fără repetări, temporizator, istoric, temă dark) — vezi `../quiz-programare-web-frontend/README.md`.
 
