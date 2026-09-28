@@ -38,7 +38,8 @@ Restul funcțiilor (fără repetări, temporizator, istoric, temă dark) — vez
 
 ## Salvarea rezultatelor în Google Sheets
 
-Înainte de fiecare test sau examen, elevul își scrie **Nume** și **Prenume**. La final, rezultatul se trimite
+Înainte de fiecare test sau examen, elevul își scrie **Nume** și **Prenume**; numele trebuie să fie în lista din
+`src/app/data/students.ts` (nu contează majusculele, diacriticele, cratimele sau spațiile în plus). La final, rezultatul se trimite
 automat în Google Sheets, în tab-ul **Planificare**: data, tipul (modul/examen), testul, numele, corecte, procent,
 nota, durata, timpul pe întrebare, răspunsurile și informații despre dispozitiv (tip, sistem, browser, ecran,
 limbă, fus orar, IP, ID dispozitiv).

@@ -4,18 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { EXAMS, MODULES, findModule } from '../../data/modules';
 import { QuizModule } from '../../models/quiz';
 import { QuizService } from '../../services/quiz.service';
-
-/** Doar litere (inclusiv diacritice), spații și cratimă; minim 2 caractere. */
-const NAME_PATTERN = /^[\p{L}][\p{L} '-]{1,39}$/u;
-
-/** „ion  popescu” → „Ion Popescu” */
-function tidy(value: string): string {
-  return value
-    .trim()
-    .replace(/\s+/g, ' ')
-    .toLocaleLowerCase('ro')
-    .replace(/(^|[\s-])\p{L}/gu, (m) => m.toLocaleUpperCase('ro'));
-}
+import { findStudent } from '../../utils/roster';
 
 @Component({
   selector: 'app-home',
@@ -36,8 +25,10 @@ export class Home {
   protected readonly nume = signal(this.quiz.lastStudent()?.nume ?? '');
   protected readonly prenume = signal(this.quiz.lastStudent()?.prenume ?? '');
   protected readonly submitted = signal(false);
-  protected readonly numeValid = computed(() => NAME_PATTERN.test(this.nume().trim()));
-  protected readonly prenumeValid = computed(() => NAME_PATTERN.test(this.prenume().trim()));
+  protected readonly numeValid = computed(() => this.nume().trim().length > 0);
+  protected readonly prenumeValid = computed(() => this.prenume().trim().length > 0);
+  /** Elevul din lista grupei (null dacă numele nu se găsește). */
+  protected readonly match = computed(() => findStudent(this.nume(), this.prenume()));
   /** Secunde pe întrebare; 0 = fără temporizator. */
   protected readonly timeLimit = signal(0);
   protected readonly timerOptions = [0, 15, 25, 30, 60];
@@ -102,10 +93,12 @@ export class Home {
   protected start(): void {
     const m = this.selected();
     this.submitted.set(true);
-    if (!m || !this.numeValid() || !this.prenumeValid()) return;
+    const student = this.match();
+    if (!m || !student) return;
+    // salvăm numele exact cum e scris în listă (cu diacriticele corecte)
     this.quiz.start(m.id, this.count(), this.timeLimit(), {
-      nume: tidy(this.nume()),
-      prenume: tidy(this.prenume()),
+      nume: student.nume,
+      prenume: student.prenume,
     });
     this.router.navigate(['/quiz']);
   }
