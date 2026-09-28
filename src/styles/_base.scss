@@ -50,8 +50,14 @@ select {
 }
 
 code,
-pre {
+pre,
+kbd {
   font-family: var(--font-mono);
+  // fără ligaturi: >= trebuie să apară ca >= (nu ca ≥), la fel => != === etc.
+  font-variant-ligatures: none;
+  font-feature-settings:
+    'liga' 0,
+    'calt' 0;
 }
 
 img,

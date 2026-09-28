@@ -5,6 +5,18 @@ import { EXAMS, MODULES, findModule } from '../../data/modules';
 import { QuizModule } from '../../models/quiz';
 import { QuizService } from '../../services/quiz.service';
 
+/** Doar litere (inclusiv diacritice), spații și cratimă; minim 2 caractere. */
+const NAME_PATTERN = /^[\p{L}][\p{L} '-]{1,39}$/u;
+
+/** „ion  popescu” → „Ion Popescu” */
+function tidy(value: string): string {
+  return value
+    .trim()
+    .replace(/\s+/g, ' ')
+    .toLocaleLowerCase('ro')
+    .replace(/(^|[\s-])\p{L}/gu, (m) => m.toLocaleUpperCase('ro'));
+}
+
 @Component({
   selector: 'app-home',
   imports: [FormsModule, RouterLink],
@@ -21,6 +33,11 @@ export class Home {
 
   protected readonly selected = signal<QuizModule | null>(null);
   protected readonly count = signal(10);
+  protected readonly nume = signal(this.quiz.lastStudent()?.nume ?? '');
+  protected readonly prenume = signal(this.quiz.lastStudent()?.prenume ?? '');
+  protected readonly submitted = signal(false);
+  protected readonly numeValid = computed(() => NAME_PATTERN.test(this.nume().trim()));
+  protected readonly prenumeValid = computed(() => NAME_PATTERN.test(this.prenume().trim()));
   /** Secunde pe întrebare; 0 = fără temporizator. */
   protected readonly timeLimit = signal(0);
   protected readonly timerOptions = [0, 15, 25, 30, 60];
@@ -84,8 +101,12 @@ export class Home {
 
   protected start(): void {
     const m = this.selected();
-    if (!m) return;
-    this.quiz.start(m.id, this.count(), this.timeLimit());
+    this.submitted.set(true);
+    if (!m || !this.numeValid() || !this.prenumeValid()) return;
+    this.quiz.start(m.id, this.count(), this.timeLimit(), {
+      nume: tidy(this.nume()),
+      prenume: tidy(this.prenume()),
+    });
     this.router.navigate(['/quiz']);
   }
 

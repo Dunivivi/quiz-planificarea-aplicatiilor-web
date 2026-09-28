@@ -218,6 +218,42 @@
         }
       </fieldset>
 
+      <fieldset class="setup__field setup__field--student">
+        <legend>Cine dă testul?</legend>
+        <div class="student">
+          <div class="field" [class.is-invalid]="submitted() && !numeValid()">
+            <label for="nume">Nume</label>
+            <input
+              id="nume"
+              autocomplete="family-name"
+              placeholder="ex: Popescu"
+              [ngModel]="nume()"
+              (ngModelChange)="nume.set($event)"
+            />
+            @if (submitted() && !numeValid()) {
+              <span class="field__error">Scrie numele de familie (doar litere).</span>
+            }
+          </div>
+          <div class="field" [class.is-invalid]="submitted() && !prenumeValid()">
+            <label for="prenume">Prenume</label>
+            <input
+              id="prenume"
+              autocomplete="given-name"
+              placeholder="ex: Ion"
+              [ngModel]="prenume()"
+              (ngModelChange)="prenume.set($event)"
+            />
+            @if (submitted() && !prenumeValid()) {
+              <span class="field__error">Scrie prenumele (doar litere).</span>
+            }
+          </div>
+        </div>
+        <p class="muted setup__note">
+          🔒 Împreună cu rezultatul se salvează numele, data, tipul dispozitivului, browserul și
+          adresa IP, doar pentru evidența profesorului.
+        </p>
+      </fieldset>
+
       <div class="setup__footer">
         <p class="muted setup__hint">
           <strong>{{ count() }}</strong> întrebări din {{ m.questions.length }} ·

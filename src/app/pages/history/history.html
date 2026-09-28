@@ -56,7 +56,12 @@
             <span class="module-tile module-tile--sm" aria-hidden="true">{{ m?.short }}</span>
             <div class="row__main">
               <strong>{{ m?.name }}</strong>
-              <span class="muted">{{ r.date | date: 'd MMM y, HH:mm' }} · {{ r.durationSec | duration }}</span>
+              <span class="muted">
+                @if (r.nume) {
+                  {{ r.prenume }} {{ r.nume }} ·
+                }
+                {{ r.date | date: 'd MMM y, HH:mm' }} · {{ r.durationSec | duration }}
+              </span>
             </div>
             <span class="row__score">{{ r.correct }}/{{ r.total }}</span>
             <span class="badge" [class]="levelClass(r.percent)">{{ r.percent }}%</span>

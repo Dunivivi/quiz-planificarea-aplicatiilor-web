@@ -34,6 +34,15 @@ export interface SessionQuestion {
   picked: number | null;
 }
 
+/** Elevul care dă testul. */
+export interface Student {
+  nume: string;
+  prenume: string;
+}
+
+/** Starea trimiterii rezultatului în Google Sheets. */
+export type SyncStatus = 'pending' | 'sent' | 'error' | 'disabled';
+
 /** Testul curent. Se salvează în localStorage ca să poată fi reluat după refresh. */
 export interface QuizSession {
   moduleId: string;
@@ -43,6 +52,7 @@ export interface QuizSession {
   finishedAt?: number;
   /** Secunde pentru fiecare întrebare (0 = fără limită de timp). */
   timeLimit: number;
+  student?: Student;
   /** Când a început întrebarea curentă — pentru temporizator (continuă și după refresh). */
   questionStartedAt: number;
 }
@@ -56,4 +66,8 @@ export interface QuizResult {
   percent: number;
   date: number;
   durationSec: number;
+  nume?: string;
+  prenume?: string;
+  timeLimit?: number;
+  sync?: SyncStatus;
 }

@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { findModule } from '../../data/modules';
 import { QuizService } from '../../services/quiz.service';
+import { SheetsService } from '../../services/sheets.service';
 import { DurationPipe } from '../../shared/duration.pipe';
 import { gradeFor } from '../../shared/grade';
 import { ScoreRing } from '../../shared/score-ring';
@@ -22,6 +23,18 @@ export class Result {
   protected readonly session = this.quiz.lastSession;
   protected readonly module = computed(() => findModule(this.session()?.moduleId ?? ''));
   protected readonly filter = signal<Filter>('all');
+  protected readonly sheets = inject(SheetsService);
+
+  /** Rezultatul salvat pentru ultimul test (are și starea trimiterii în Google Sheets). */
+  protected readonly result = computed(() => {
+    const s = this.session();
+    return s ? this.quiz.history().find((r) => r.date === s.finishedAt) ?? null : null;
+  });
+
+  protected resend(): void {
+    const r = this.result();
+    if (r) this.sheets.send(r, this.session());
+  }
   protected readonly findModule = findModule;
 
   /** La examene: scorul pe fiecare modul inclus. */
@@ -76,7 +89,12 @@ export class Result {
   protected retry(): void {
     const s = this.session();
     if (!s) return;
-    this.quiz.start(s.moduleId, s.questions.length, s.timeLimit ?? 0);
+    const student = s.student ?? this.quiz.lastStudent();
+    if (!student) {
+      this.router.navigate(['/']);
+      return;
+    }
+    this.quiz.start(s.moduleId, s.questions.length, s.timeLimit ?? 0, student);
     this.router.navigate(['/quiz']);
   }
 }

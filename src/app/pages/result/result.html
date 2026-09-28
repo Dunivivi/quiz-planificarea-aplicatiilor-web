@@ -7,7 +7,12 @@
       </app-score-ring>
 
       <div class="summary__body">
-        <p class="eyebrow">{{ module()?.name }} · rezultat</p>
+        <p class="eyebrow">
+          {{ module()?.name }} · rezultat
+          @if (session()?.student; as st) {
+            · {{ st.prenume }} {{ st.nume }}
+          }
+        </p>
         <h1 class="summary__title">{{ st.grade.title }}</h1>
         <p class="muted">{{ st.grade.message }}</p>
 
@@ -25,6 +30,26 @@
             <dd>{{ st.duration | duration }}</dd>
           </div>
         </dl>
+
+        @if (result(); as r) {
+          <div class="sync sync--{{ r.sync ?? 'disabled' }}" role="status">
+            @switch (r.sync) {
+              @case ('pending') {
+                <span class="sync__dot"></span> Se salvează rezultatul…
+              }
+              @case ('sent') {
+                ✓ Rezultatul a fost salvat în tabelul profesorului.
+              }
+              @case ('error') {
+                ✕ Rezultatul nu a putut fi trimis (verifică internetul).
+                <button type="button" class="btn btn--secondary sync__retry" (click)="resend()">Încearcă din nou</button>
+              }
+              @default {
+                Rezultatul e salvat pe acest dispozitiv.
+              }
+            }
+          </div>
+        }
 
         <div class="summary__actions">
           <button type="button" class="btn btn--primary" (click)="retry()">

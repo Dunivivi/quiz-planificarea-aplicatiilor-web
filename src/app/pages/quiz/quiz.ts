@@ -12,6 +12,7 @@ import { DecimalPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { findModule } from '../../data/modules';
 import { QuizService } from '../../services/quiz.service';
+import { SheetsService } from '../../services/sheets.service';
 
 @Component({
   selector: 'app-quiz',
@@ -24,6 +25,7 @@ import { QuizService } from '../../services/quiz.service';
 })
 export class Quiz {
   protected readonly quiz = inject(QuizService);
+  private readonly sheets = inject(SheetsService);
   private readonly router = inject(Router);
 
   protected readonly letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -97,6 +99,9 @@ export class Quiz {
   protected next(): void {
     const finished = this.quiz.next();
     if (finished) {
+      // trimitem rezultatul în Google Sheets, în fundal; pagina de rezultat arată starea
+      const result = this.quiz.history()[0];
+      if (result) this.sheets.send(result, this.quiz.lastSession());
       this.router.navigate(['/rezultat']);
     }
   }

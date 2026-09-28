@@ -1,6 +1,6 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import { findModule } from '../data/modules';
-import { QuizModule, QuizResult, QuizSession, SessionQuestion } from '../models/quiz';
+import { QuizModule, QuizResult, QuizSession, SessionQuestion, Student, SyncStatus } from '../models/quiz';
 import { shuffle } from '../utils/shuffle';
 import { StorageService } from './storage.service';
 
@@ -8,6 +8,7 @@ const SESSION_KEY = 'session';
 const LAST_KEY = 'last';
 const HISTORY_KEY = 'history';
 const SEEN_KEY = 'seen';
+const STUDENT_KEY = 'student';
 
 /** Pentru fiecare modul: indexurile întrebărilor deja primite. */
 type SeenMap = Record<string, number[]>;
@@ -28,6 +29,8 @@ export class QuizService {
   readonly lastSession = signal<QuizSession | null>(this.storage.get(LAST_KEY, null));
   /** Istoricul tuturor testelor (cel mai nou primul). */
   readonly history = signal<QuizResult[]>(this.storage.get(HISTORY_KEY, []));
+  /** Ultimul nume introdus, ca să nu fie scris din nou. */
+  readonly lastStudent = signal<Student | null>(this.storage.get(STUDENT_KEY, null));
 
   readonly currentQuestion = computed(() => {
     const s = this.session();
@@ -44,9 +47,12 @@ export class QuizService {
   }
 
   /** Pornește un test nou cu `count` întrebări din modulul (sau examenul) ales. */
-  start(moduleId: string, count: number, timeLimit = 0): void {
+  start(moduleId: string, count: number, timeLimit: number, student: Student): void {
     const module = findModule(moduleId);
     if (!module) return;
+
+    this.lastStudent.set(student);
+    this.storage.set(STUDENT_KEY, student);
 
     const picked = this.pickQuestions(module, count);
 
@@ -74,6 +80,7 @@ export class QuizService {
       startedAt: now,
       timeLimit,
       questionStartedAt: now,
+      student,
     });
   }
 
@@ -111,6 +118,12 @@ export class QuizService {
     this.saveSession(null);
   }
 
+  setSync(resultId: string, sync: SyncStatus): void {
+    const history = this.history().map((r) => (r.id === resultId ? { ...r, sync } : r));
+    this.history.set(history);
+    this.storage.set(HISTORY_KEY, history);
+  }
+
   clearHistory(): void {
     this.history.set([]);
     this.lastSession.set(null);
@@ -145,6 +158,10 @@ export class QuizService {
       percent: Math.round((correct / s.questions.length) * 100),
       date: finished.finishedAt!,
       durationSec: Math.round((finished.finishedAt! - s.startedAt) / 1000),
+      nume: s.student?.nume,
+      prenume: s.student?.prenume,
+      timeLimit: s.timeLimit,
+      sync: 'pending',
     };
 
     this.lastSession.set(finished);
