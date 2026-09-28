@@ -41,7 +41,7 @@ Restul funcțiilor (fără repetări, temporizator, istoric, temă dark) — vez
 Înainte de fiecare test sau examen, elevul își scrie **Nume** și **Prenume**. La final, rezultatul se trimite
 automat în Google Sheets, în tab-ul **Planificare**: data, tipul (modul/examen), testul, numele, corecte, procent,
 nota, durata, timpul pe întrebare, răspunsurile și informații despre dispozitiv (tip, sistem, browser, ecran,
-limbă, fus orar, IP, ID dispozitiv). Elevul este informat despre asta în formular.
+limbă, fus orar, IP, ID dispozitiv).
 
 Se folosește același script Google Apps Script ca la quiz-ul PHP ([`google-apps-script/Code.gs`](google-apps-script/Code.gs));
 URL-ul și numele tab-ului sunt în `src/app/config.ts`.
