@@ -12,6 +12,7 @@ import { DecimalPipe } from '@angular/common';
 import { Router } from '@angular/router';
 import { findModule } from '../../data/modules';
 import { QuizService } from '../../services/quiz.service';
+import { IntegrityService } from '../../services/integrity.service';
 import { SheetsService } from '../../services/sheets.service';
 
 @Component({
@@ -26,6 +27,7 @@ import { SheetsService } from '../../services/sheets.service';
 export class Quiz {
   protected readonly quiz = inject(QuizService);
   private readonly sheets = inject(SheetsService);
+  private readonly integrity = inject(IntegrityService);
   private readonly router = inject(Router);
 
   protected readonly letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -77,6 +79,10 @@ export class Quiz {
     const timer = setInterval(() => this.now.set(Date.now()), 250);
     inject(DestroyRef).onDestroy(() => clearInterval(timer));
 
+    // urmărim ieșirile din pagină, copierile și lipirile cât timp testul e deschis
+    this.integrity.attach();
+    inject(DestroyRef).onDestroy(() => this.integrity.detach());
+
     // Când timpul ajunge la 0 și încă nu s-a răspuns, marcăm întrebarea ca expirată
     effect(() => {
       if (this.remaining() === 0 && !this.answered()) {
@@ -93,6 +99,7 @@ export class Quiz {
   }
 
   protected pick(index: number): void {
+    this.integrity.answered((this.session()?.current ?? 0) + 1);
     this.quiz.answer(index);
   }
 

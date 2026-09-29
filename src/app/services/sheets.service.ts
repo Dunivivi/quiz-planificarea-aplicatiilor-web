@@ -40,6 +40,7 @@ export class SheetsService {
         'Durata (sec)': result.durationSec,
         'Timp/întrebare': result.timeLimit ? `${result.timeLimit}s` : 'fără',
         Răspunsuri: session ? details(session) : '',
+        Semnale: result.signals ?? '',
         ...deviceColumns(device),
       },
     };

@@ -2,6 +2,7 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { findModule } from '../data/modules';
 import { QuizModule, QuizResult, QuizSession, SessionQuestion, Student, SyncStatus } from '../models/quiz';
 import { shuffle } from '../utils/shuffle';
+import { IntegrityService } from './integrity.service';
 import { StorageService } from './storage.service';
 
 const SESSION_KEY = 'session';
@@ -22,6 +23,7 @@ type SeenMap = Record<string, number[]>;
 @Injectable({ providedIn: 'root' })
 export class QuizService {
   private readonly storage = inject(StorageService);
+  private readonly integrity = inject(IntegrityService);
 
   /** Testul în desfășurare (sau null). */
   readonly session = signal<QuizSession | null>(this.storage.get(SESSION_KEY, null));
@@ -53,6 +55,7 @@ export class QuizService {
 
     this.lastStudent.set(student);
     this.storage.set(STUDENT_KEY, student);
+    this.integrity.reset();
 
     const picked = this.pickQuestions(module, count);
 
@@ -161,6 +164,7 @@ export class QuizService {
       nume: s.student?.nume,
       prenume: s.student?.prenume,
       timeLimit: s.timeLimit,
+      signals: this.integrity.summary(),
       sync: 'pending',
     };
 

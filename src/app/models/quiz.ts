@@ -69,5 +69,7 @@ export interface QuizResult {
   nume?: string;
   prenume?: string;
   timeLimit?: number;
+  /** Ieșiri din pagină, copieri, lipiri — doar pentru tabelul profesorului. */
+  signals?: string;
   sync?: SyncStatus;
 }
