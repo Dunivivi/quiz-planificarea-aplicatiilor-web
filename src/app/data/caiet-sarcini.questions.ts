@@ -10,10 +10,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Un document care conține doar codul sursă al aplicației',
     ],
     correct: 0,
-    explanation: 'Caietul de sarcini este documentul tehnic scris și aprobat prin care beneficiarul descrie complet și verificabil cerințele aplicației.',
+    explanation:
+      'Caietul de sarcini este documentul tehnic scris și aprobat prin care beneficiarul descrie complet și verificabil cerințele aplicației.',
   },
   {
-    question: 'De ce este numit caietul de sarcini adesea „contractul tehnic” dintre beneficiar și executant?',
+    question:
+      'De ce este numit caietul de sarcini adesea „contractul tehnic” dintre beneficiar și executant?',
     options: [
       'Pentru că stabilește doar prețul lucrării, fără cerințe tehnice',
       'Pentru că se anexează la contract și devine baza recepției lucrării',
@@ -21,10 +23,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru că este redactat de un avocat specializat',
     ],
     correct: 1,
-    explanation: 'Caietul de sarcini se anexează la contract și devine baza pe care se face recepția lucrării, de aceea e numit „contractul tehnic”.',
+    explanation:
+      'Caietul de sarcini se anexează la contract și devine baza pe care se face recepția lucrării, de aceea e numit „contractul tehnic”.',
   },
   {
-    question: 'Care dintre următoarele NU este o trăsătură a caietului de sarcini, conform cursului?',
+    question:
+      'Care dintre următoarele NU este o trăsătură a caietului de sarcini, conform cursului?',
     options: [
       'Conține cerințe numerotate individual, verificabile',
       'Se anexează la contract și constituie baza recepției',
@@ -32,10 +36,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Este un document scris și aprobat',
     ],
     correct: 2,
-    explanation: 'Caietul de sarcini este un document scris și aprobat, nu o discuție sau o listă de dorințe informală.',
+    explanation:
+      'Caietul de sarcini este un document scris și aprobat, nu o discuție sau o listă de dorințe informală.',
   },
   {
-    question: 'Ce se publică, în proiectele publice din Republica Moldova, împreună cu anunțul de achiziție?',
+    question:
+      'Ce se publică, în proiectele publice din Republica Moldova, împreună cu anunțul de achiziție?',
     options: [
       'Doar bugetul total disponibil',
       'Doar numele executantului câștigător',
@@ -43,21 +49,24 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Caietul de sarcini',
     ],
     correct: 3,
-    explanation: 'Caietul de sarcini se publică odată cu anunțul de achiziție, pentru ca ofertanții să își calculeze prețul și termenul.',
+    explanation:
+      'Caietul de sarcini se publică odată cu anunțul de achiziție, pentru ca ofertanții să își calculeze prețul și termenul.',
   },
   {
-    question: 'Care este primul motiv, prezentat în curs, pentru care este necesar caietul de sarcini?',
+    question: 'Care dintre următoarele este un motiv pentru care este necesar caietul de sarcini?',
     options: [
       'Elimină interpretările diferite ale acelorași cerințe',
-      'Reduce numărul de întâlniri dintre beneficiar și executant',
+      'Reduce numărul de întâlniri dintre beneficiar și executant la zero',
       'Mărește automat prețul lucrării',
       'Înlocuiește complet etapa de testare a aplicației',
     ],
     correct: 0,
-    explanation: 'O cerință scrisă cu valoare și unitate de măsură nu se mai poate interpreta în mai multe feluri.',
+    explanation:
+      'O cerință scrisă cu valoare și unitate de măsură nu se mai poate interpreta în mai multe feluri; caietul nu înlocuiește testarea și nu are efect automat asupra prețului.',
   },
   {
-    question: 'Ce rol joacă caietul de sarcini după livrarea aplicației, pentru o nouă echipă de mentenanță?',
+    question:
+      'Ce rol joacă caietul de sarcini după livrarea aplicației, pentru o nouă echipă de mentenanță?',
     options: [
       'Este înlocuit obligatoriu de codul sursă comentat',
       'Rămâne documentație și explică de ce aplicația funcționează așa cum funcționează',
@@ -76,7 +85,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Exclusiv executantul, înainte de semnarea contractului',
     ],
     correct: 2,
-    explanation: 'Caietul de sarcini se elaborează de beneficiar, împreună cu un analist TI, conform recapitulării din curs.',
+    explanation:
+      'Caietul de sarcini se elaborează de beneficiar, împreună cu un analist TI, conform recapitulării din curs.',
   },
   {
     question: 'Cine aprobă, de regulă, caietul de sarcini, conform cursului?',
@@ -87,7 +97,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Conducătorul instituției beneficiare',
     ],
     correct: 3,
-    explanation: 'Conducătorul instituției beneficiare aprobă documentul, iar executantul îl citește și îl ofertează.',
+    explanation:
+      'Conducătorul instituției beneficiare aprobă documentul, iar executantul îl citește și îl ofertează.',
   },
   {
     question: 'Ce face executantul cu caietul de sarcini, conform recapitulării?',
@@ -98,7 +109,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Îl publică drept manual de utilizare',
     ],
     correct: 0,
-    explanation: 'Executantul citește caietul de sarcini elaborat de beneficiar și pe baza lui depune o ofertă.',
+    explanation:
+      'Executantul citește caietul de sarcini elaborat de beneficiar și pe baza lui depune o ofertă.',
   },
   {
     question: 'Conform recapitulării din curs, în ce ordine merge structura unui caiet de sarcini?',
@@ -109,29 +121,34 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'De la anexe la informația generală',
     ],
     correct: 1,
-    explanation: 'Documentul pornește de la context, continuă cu cerințele și se încheie cu criteriile de acceptare.',
+    explanation:
+      'Documentul pornește de la context, continuă cu cerințele și se încheie cu criteriile de acceptare.',
   },
   {
-    question: 'Care este capitolul cel mai voluminos din caietul de sarcini al SIA „e-Integritate”?',
+    question:
+      'De ce, într-un caiet de sarcini serios, capitolele de cerințe sunt precedate de capitole de context (informație generală, situația curentă, fluxuri)?',
     options: [
-      'Capitolul cerințelor nefuncționale',
-      'Anexele cu formulare',
-      'Capitolul cu cerințele de modificare pe componente, cu 28 de pagini și 11 subcapitole',
-      'Capitolul de informație generală, cu 6 pagini',
+      'Pentru că regulile de formatare interzic începerea cu cerințe',
+      'Pentru că executantul poate interpreta corect cerințele numai dacă înțelege contextul în care vor fi folosite',
+      'Pentru că contextul înlocuiește cerințele',
+      'Pentru că beneficiarul nu are cerințe clare',
     ],
-    correct: 2,
-    explanation: 'Cerințele de modificare pe componente ocupă partea cea mai voluminoasă: 28 de pagini, cu 11 subcapitole.',
+    correct: 1,
+    explanation:
+      'Contextul explică de ce și pentru cine se construiește aplicația, iar cerințele se înțeleg corect doar împreună cu el.',
   },
   {
-    question: 'Care este concluzia practică a cursului privind proporția cerințelor propriu-zise într-un caiet de sarcini serios?',
+    question:
+      'Care afirmație despre proporția cerințelor într-un caiet de sarcini serios este corectă?',
     options: [
       'Cerințele ocupă întotdeauna peste 90% din text',
-      'Contextul (situația curentă, fluxuri) nu ar trebui inclus niciodată',
+      'Contextul nu ar trebui inclus niciodată',
       'Un caiet de sarcini serios nu are anexe',
-      'Cerințele propriu-zise ocupă mai puțin de jumătate din text; restul este context necesar',
+      'Cerințele propriu-zise pot ocupa mai puțin de jumătate din text, restul fiind context necesar',
     ],
     correct: 3,
-    explanation: 'Într-un caiet de sarcini serios, cerințele propriu-zise ocupă mai puțin de jumătate din text, restul fiind context.',
+    explanation:
+      'Un caiet de sarcini serios include mult context (situație curentă, fluxuri, roluri) pe lângă cerințe.',
   },
   {
     question: 'Ce conține, de regulă, capitolul de informație generală al unui caiet de sarcini?',
@@ -142,7 +159,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Doar procesul-verbal de recepție',
     ],
     correct: 0,
-    explanation: 'Capitolul de informație generală începe cu noțiuni și acronime, continuă cu referințe legale și principii, apoi destinația și obiectivele.',
+    explanation:
+      'Capitolul de informație generală începe cu noțiuni și acronime, continuă cu referințe legale și principii, apoi destinația și obiectivele.',
   },
   {
     question: 'De ce începe caietul de sarcini cu un tabel de noțiuni și acronime?',
@@ -153,10 +171,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru că este cerut exclusiv de legislația privind achizițiile',
     ],
     correct: 1,
-    explanation: 'Dacă cele două părți nu folosesc aceleași cuvinte cu același sens, restul documentului își pierde valoarea.',
+    explanation:
+      'Dacă cele două părți nu folosesc aceleași cuvinte cu același sens, restul documentului își pierde valoarea.',
   },
   {
-    question: 'Care dintre următoarele este un principiu de dezvoltare menționat la capitolul de informație generală?',
+    question:
+      'Care dintre următoarele este un principiu de dezvoltare menționat la capitolul de informație generală?',
     options: [
       'Eliminarea documentației tehnice',
       'Interzicerea testării aplicației',
@@ -164,10 +184,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Reducerea numărului de utilizatori',
     ],
     correct: 2,
-    explanation: 'Printre principiile menționate se numără legalitatea, securitatea informațională, transparența și scalabilitatea.',
+    explanation:
+      'Printre principiile menționate se numără legalitatea, securitatea informațională, transparența și scalabilitatea.',
   },
   {
-    question: 'Ce formă are, conform exemplului din curs, o cerință tehnică bine scrisă într-un tabel de cerințe?',
+    question:
+      'Ce formă are, conform exemplului din curs, o cerință tehnică bine scrisă într-un tabel de cerințe?',
     options: [
       'Doar un text liber, fără identificator',
       'Un paragraf lung cu mai multe cerințe amestecate',
@@ -175,10 +197,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Identificator, obligativitate, descriere — o singură idee pe rând',
     ],
     correct: 3,
-    explanation: 'Forma standard a unei cerințe este: identificator, obligativitate, descriere, cu o singură idee pe rând.',
+    explanation:
+      'Forma standard a unei cerințe este: identificator, obligativitate, descriere, cu o singură idee pe rând.',
   },
   {
-    question: 'Ce reprezintă fiecare „bandă” dintr-o diagramă BPMN de flux de lucru, conform exemplului din curs?',
+    question:
+      'Ce reprezintă fiecare „bandă” dintr-o diagramă BPMN de flux de lucru, conform exemplului din curs?',
     options: [
       'Un actor implicat în proces',
       'O pagină a aplicației Web',
@@ -186,29 +210,33 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Un capitol al caietului de sarcini',
     ],
     correct: 0,
-    explanation: 'Fiecare bandă a diagramei BPMN reprezintă un actor, precum cancelaria, decidentul sau inspectorul.',
+    explanation:
+      'Fiecare bandă a diagramei BPMN reprezintă un actor, precum cancelaria, decidentul sau inspectorul.',
   },
   {
-    question: 'Care este elementul central al modelului de date prezentat pentru sistemul e-Integritate?',
+    question: 'Într-un model de date al unei aplicații, ce poate fi elementul central?',
     options: [
-      'Certificatul TLS',
-      'Dosarul',
-      'Utilizatorul',
-      'Raportul lunar',
+      'Culoarea butoanelor',
+      'Entitatea în jurul căreia se leagă celelalte obiecte informaționale (de exemplu comanda, dosarul sau cererea)',
+      'Adresa serverului',
+      'Numele echipei',
     ],
     correct: 1,
-    explanation: 'În jurul Dosarului apar Sesizarea, Actul de constatare, Interdicția și Subiectul declarării.',
+    explanation:
+      'Modelul de date arată entitatea principală și obiectele legate de ea, ca să se înțeleagă ce date se gestionează.',
   },
   {
-    question: 'Pentru site-ul unui colegiu, care ar fi, conform exemplului din curs, câteva obiecte informaționale tipice?',
+    question:
+      'Pentru un magazin online, care ar fi câteva obiecte informaționale tipice ale sistemului?',
     options: [
       'Doar adresele IP ale vizitatorilor',
       'Doar numele browserelor testate',
-      'Știre, Anunț, Specialitate, Candidat, Cerere, Utilizator',
+      'Produs, Comandă, Client, Categorie',
       'Doar fișierele CSS ale site-ului',
     ],
     correct: 2,
-    explanation: 'Cursul dă exemplul: Știre, Anunț, Specialitate, Candidat, Cerere, Utilizator, ca obiecte informaționale pentru site-ul colegiului.',
+    explanation:
+      'Obiectele informaționale sunt entitățile din domeniu despre care aplicația păstrează date: produse, comenzi, clienți etc.',
   },
   {
     question: 'Cum se descriu, conform cursului, cerințele funcționale într-un caiet de sarcini?',
@@ -219,10 +247,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Grupate pe componente, fiecare cu o scurtă descriere înainte de tabelul de cerințe',
     ],
     correct: 3,
-    explanation: 'Cerințele funcționale nu se scriu la grămadă: se grupează pe componente, fiecare cu descrierea ei.',
+    explanation:
+      'Cerințele funcționale nu se scriu la grămadă: se grupează pe componente, fiecare cu descrierea ei.',
   },
   {
-    question: 'Ce se scrie, pentru fiecare componentă funcțională, într-un caiet de sarcini bine structurat?',
+    question:
+      'Ce se scrie, pentru fiecare componentă funcțională, într-un caiet de sarcini bine structurat?',
     options: [
       'Ce face componenta, cui este accesibilă, rolurile care o folosesc și tabelul cerințelor',
       'Doar numele componentei, fără alte detalii',
@@ -230,21 +260,24 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Doar numărul de linii de cod estimat',
     ],
     correct: 0,
-    explanation: 'Pentru fiecare componentă se descriu destinația, accesibilitatea, rolurile, câmpurile formularelor și tabelul cerințelor.',
+    explanation:
+      'Pentru fiecare componentă se descriu destinația, accesibilitatea, rolurile, câmpurile formularelor și tabelul cerințelor.',
   },
   {
-    question: 'Care este, conform cursului, o grupare posibilă a componentelor pentru site-ul unui colegiu?',
+    question: 'Cum se pot grupa pe componente cerințele funcționale ale unui magazin online?',
     options: [
       'Doar Contul administratorului',
-      'Pagina publică, Admitere online, Orar și materiale, Administrarea conținutului, Rapoarte și statistici',
-      'Doar Pagina publică și nimic altceva',
+      'Catalog public, Coș și comandă, Cont client, Administrare, Rapoarte',
+      'Doar Catalog public și nimic altceva',
       'Doar Administrarea bazei de date',
     ],
     correct: 1,
-    explanation: 'Exemplul din curs grupează cerințele funcționale ale site-ului colegiului pe aceste cinci componente.',
+    explanation:
+      'Cerințele se grupează pe componente funcționale distincte, fiecare cu descrierea și tabelul ei de cerințe.',
   },
   {
-    question: 'Ce coloane are tabelul de cerințe descris în curs, valabil atât pentru cerințele funcționale, cât și pentru cele nefuncționale?',
+    question:
+      'Ce coloane are tabelul de cerințe descris în curs, valabil atât pentru cerințele funcționale, cât și pentru cele nefuncționale?',
     options: [
       'Nume utilizator, Parolă, Rol',
       'Data creării, Data modificării, Autor',
@@ -252,18 +285,21 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Preț, Termen, Executant',
     ],
     correct: 2,
-    explanation: 'Ambele tipuri de cerințe folosesc același tabel cu trei coloane; se schimbă doar prefixul codului.',
+    explanation:
+      'Ambele tipuri de cerințe folosesc același tabel cu trei coloane; se schimbă doar prefixul codului.',
   },
   {
-    question: 'Ce înseamnă, conform codificării prezentate în curs, prefixele CF, DOC și M?',
+    question:
+      'De ce primesc cerințele identificatori cu prefix diferit pentru fiecare tip (funcțională, nefuncțională, tehnică, de documentare)?',
     options: [
-      'CF pentru costuri financiare, DOC pentru domeniu, M pentru mediu',
-      'CF pentru contul final, DOC pentru documentul contractual, M pentru manual',
-      'CF pentru certificat final, DOC pentru dosar, M pentru mentenanță',
-      'CF pentru funcțional, DOC pentru documentare, M pentru obligatoriu',
+      'Pentru a decora documentul',
+      'Pentru ca tipul fiecărei cerințe să se vadă imediat și să poată fi grupată și urmărită la teste',
+      'Pentru a ascunde cerințele opționale',
+      'Pentru că prefixele determină prețul',
     ],
-    correct: 3,
-    explanation: 'CF este prefixul cerințelor funcționale, DOC al celor de documentare, iar M marchează obligativitatea.',
+    correct: 1,
+    explanation:
+      'Identificatorul cu prefix permite clasificarea rapidă și trasabilitatea cerinței până la test și recepție.',
   },
   {
     question: 'Ce înseamnă, într-un caiet de sarcini, „trasabilitatea” unei cerințe?',
@@ -274,7 +310,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Numărul de modificări aduse aplicației după livrare',
     ],
     correct: 0,
-    explanation: 'Trasabilitatea permite urmărirea unei cerințe de la identificatorul ei până la verificarea sa la recepție.',
+    explanation:
+      'Trasabilitatea permite urmărirea unei cerințe de la identificatorul ei până la verificarea sa la recepție.',
   },
   {
     question: 'Care sunt, conform recapitulării din curs, trăsăturile unei cerințe bune?',
@@ -285,10 +322,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Este scrisă doar în limba engleză, indiferent de beneficiar',
     ],
     correct: 1,
-    explanation: 'O cerință bună este unică, verificabilă, are o valoare măsurabilă și nu impune o soluție tehnică fără motiv.',
+    explanation:
+      'O cerință bună este unică, verificabilă, are o valoare măsurabilă și nu impune o soluție tehnică fără motiv.',
   },
   {
-    question: 'Cum se transformă cerința slabă „Site-ul trebuie să fie rapid” într-o cerință verificabilă, conform principiilor din curs?',
+    question:
+      'Cum se transformă cerința slabă „Site-ul trebuie să fie rapid” într-o cerință verificabilă, conform principiilor din curs?',
     options: [
       'Eliminând complet cerința din document',
       'Înlocuind cuvântul „rapid” cu numele unei tehnologii concrete',
@@ -296,7 +335,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Repetând aceeași propoziție de mai multe ori în document',
     ],
     correct: 2,
-    explanation: 'O cerință devine verificabilă atunci când primește o valoare măsurabilă și o unitate de măsură clară.',
+    explanation:
+      'O cerință devine verificabilă atunci când primește o valoare măsurabilă și o unitate de măsură clară.',
   },
   {
     question: 'Conform cursului, ce categorii acoperă cerințele tehnice ale unei aplicații Web?',
@@ -307,10 +347,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Platforma, browserele, responsivitatea, performanța, securitatea, accesibilitatea, limbile, integrările și găzduirea',
     ],
     correct: 3,
-    explanation: 'Recapitularea cursului enumeră aceste categorii ca acoperind cerințele tehnice ale aplicației Web.',
+    explanation:
+      'Recapitularea cursului enumeră aceste categorii ca acoperind cerințele tehnice ale aplicației Web.',
   },
   {
-    question: 'Când, conform cursului, este justificat să se impună o anumită tehnologie într-o cerință?',
+    question:
+      'Când, conform cursului, este justificat să se impună o anumită tehnologie într-o cerință?',
     options: [
       'Numai când există un motiv real, precum infrastructura instituției sau o obligație legală',
       'Întotdeauna, indiferent de context',
@@ -318,458 +360,518 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Doar dacă executantul o solicită',
     ],
     correct: 0,
-    explanation: 'Tehnologia se impune doar când există un motiv real: infrastructură existentă, personal de mentenanță sau obligație legală.',
+    explanation:
+      'Tehnologia se impune doar când există un motiv real: infrastructură existentă, personal de mentenanță sau obligație legală.',
   },
   {
-    question: 'Care este obiectul achiziției descris în caietul de sarcini pentru „Biblioteca online a colegiului”?',
+    question:
+      'Ce descrie, într-un caiet de sarcini, secțiunea despre obiectul lucrării (obiectul achiziției)?',
     options: [
-      'Doar mutarea bibliotecii într-o clădire nouă',
-      'Elaborarea, testarea, punerea în funcțiune și transmiterea unei aplicații Web pentru consultarea catalogului, rezervarea publicațiilor și evidența împrumuturilor',
-      'Doar achiziționarea unor calculatoare noi pentru bibliotecă',
-      'Doar tipărirea unui catalog de bibliotecă pe hârtie',
-    ],
-    correct: 1,
-    explanation: 'Obiectul achiziției este aplicația Web care asigură consultarea catalogului, rezervarea publicațiilor și evidența împrumuturilor.',
-  },
-  {
-    question: 'Ce se întâmplă, conform documentului, cu o cerință care nu este inclusă în caietul de sarcini al bibliotecii?',
-    options: [
-      'Se adaugă gratuit de către executant, la cerere',
-      'Anulează automat contractul',
-      'Nu poate fi pretinsă la recepția lucrării',
-      'Se consideră automat obligatorie',
-    ],
-    correct: 2,
-    explanation: 'Documentul precizează explicit că orice cerință neinclusă nu poate fi pretinsă la recepție.',
-  },
-  {
-    question: 'În caietul de sarcini al bibliotecii, ce reprezintă termenul „Exemplar”?',
-    options: [
-      'Titlul unei cărți, indiferent de câte copii există',
-      'Cititorul înregistrat în aplicație',
-      'Raportul lunar generat de bibliotecă',
-      'Unitatea fizică a unei publicații, identificată printr-un cod de inventar unic',
-    ],
-    correct: 3,
-    explanation: 'Exemplarul este unitatea fizică, cu cod de inventar unic; o publicație poate avea mai multe exemplare.',
-  },
-  {
-    question: 'Cum este definit termenul „Restanță” în tabelul de noțiuni al caietului de sarcini?',
-    options: [
-      'Un împrumut nerestituit după expirarea termenului',
-      'O rezervare anulată de bibliotecar',
-      'Un exemplar pierdut de bibliotecă',
-      'O publicație care nu mai este disponibilă în comerț',
+      'Ce urmează să fie livrat: elaborarea, testarea, punerea în funcțiune și transmiterea aplicației către beneficiar',
+      'Doar prețul și modalitatea de plată',
+      'Doar lista limbajelor de programare permise',
+      'Doar numele persoanelor din echipa executantului',
     ],
     correct: 0,
-    explanation: 'Restanța este împrumutul nerestituit după ce termenul de restituire a expirat.',
+    explanation:
+      'Obiectul lucrării spune clar ce primește beneficiarul la final, ca ofertanții să știe ce au de făcut.',
   },
   {
-    question: 'Ce înseamnă abrevierea M, R, O folosită în tabelele de cerințe ale documentului?',
+    question:
+      'O cerință nu apare nicăieri în caietul de sarcini aprobat. Ce consecință are asta la recepția lucrării?',
     options: [
-      'M — minimă, R — rapidă, O — orientativă',
-      'M — obligatorie, R — recomandată, O — opțională',
-      'M — modificabilă, R — respinsă, O — opțiune unică',
-      'M — manuală, R — remote, O — offline',
+      'Executantul este obligat s-o implementeze oricum, gratuit',
+      'Beneficiarul nu o poate pretinde executantului ca parte din lucrarea contractată',
+      'Contractul se anulează automat',
+      'Cerința devine automat obligatorie',
     ],
     correct: 1,
-    explanation: 'Gradul de obligativitate al fiecărei cerințe se exprimă prin M (obligatorie), R (recomandată) sau O (opțională).',
+    explanation:
+      'Doar ce este scris în caietul de sarcini se poate verifica și pretinde la recepție; de aceea documentul trebuie să fie complet.',
   },
   {
-    question: 'Care este scopul aplicației „Biblioteca online a colegiului”, conform documentului?',
+    question:
+      'Un caiet de sarcini folosește „produs” pentru descrierea unică a unui articol și „unitate” pentru fiecare bucată fizică din stoc. De ce are sens ca glosarul să facă această distincție?',
     options: [
-      'Înlocuirea completă a bibliotecarilor cu roboți',
-      'Vânzarea online a manualelor către elevi',
-      'Reducerea timpului necesar unui elev pentru a afla dacă o publicație există și pentru a o obține, și trecerea evidenței pe un sistem electronic unic',
-      'Creșterea numărului de cărți tipărite anual de colegiu',
+      'Pentru că glosarul trebuie să aibă obligatoriu două noțiuni',
+      'Pentru că unitățile se descriu doar în anexe',
+      'Pentru că cerințele devin precise: stocul se numără pe unități, iar descrierea se introduce o singură dată',
+      'Pentru că produsul și unitatea sunt oricum același lucru',
     ],
     correct: 2,
-    explanation: 'Scopul este reducerea timpului de căutare/obținere a publicațiilor și digitalizarea evidenței împrumuturilor.',
+    explanation:
+      'Când doi termeni apropiați au sensuri diferite, definirea lor evită ca o cerință să fie înțeleasă greșit.',
   },
   {
-    question: 'Care dintre următoarele este un obiectiv măsurabil (O2) din caietul de sarcini al bibliotecii?',
+    question:
+      'Ce trebuie să facă o bună definiție într-un tabel de noțiuni al caietului de sarcini?',
     options: [
-      'Toate cărțile din bibliotecă devin gratuite',
-      'Numărul bibliotecarilor se dublează în 6 luni',
-      'Site-ul are exclusiv conținut video',
-      'Cel puțin 60% dintre împrumuturile lunare pornesc de la o rezervare făcută online',
+      'Să fie cât mai scurtă, chiar dacă rămâne vagă',
+      'Să copieze definiția din dicționar fără legătură cu proiectul',
+      'Să includă prețul asociat termenului',
+      'Să explice termenul fără ambiguitate, în sensul în care este folosit în document',
     ],
     correct: 3,
-    explanation: 'Obiectivul O2 cere ca minimum 60% din împrumuturile lunare să provină dintr-o rezervare online.',
+    explanation:
+      'Definiția fixează un înțeles comun pentru beneficiar și executant, în contextul documentului.',
   },
   {
-    question: 'Câte titluri minim trebuie să fie consultabile online, conform obiectivului O1 din document?',
+    question:
+      'De ce marchează un caiet de sarcini fiecare cerință ca obligatorie, recomandată sau opțională?',
     options: [
-      'Minimum 5 000 de titluri',
-      'Minimum 500 de titluri',
-      'Minimum 50 000 de titluri',
-      'Exact 100 de titluri',
+      'Pentru a se ști care cerințe trebuie îndeplinite pentru recepție și care sunt doar dorințe sau extra',
+      'Pentru a mări numărul de pagini',
+      'Pentru ca toate cerințele să fie tratate identic',
+      'Pentru ca executantul să aleagă liber ce implementează',
     ],
     correct: 0,
-    explanation: 'Obiectivul O1 cere ca întregul fond de carte, minimum 5 000 de titluri, să fie consultabil online.',
+    explanation:
+      'Gradul de obligativitate stabilește ce condiționează recepția și ce rămâne la latitudinea părților.',
   },
   {
-    question: 'Care categorie de utilizatori are aproximativ 900 de persoane, conform publicului-țintă al aplicației?',
+    question:
+      'Care dintre următoarele este un scop bine formulat al unei aplicații Web pentru o școală?',
     options: [
-      'Administratorii aplicației',
-      'Elevii colegiului',
-      'Cadrele didactice',
-      'Bibliotecarii',
+      'Folosirea celor mai noi tehnologii existente pe piață',
+      'Reducerea timpului în care un elev află informațiile de care are nevoie și mutarea evidenței pe un sistem electronic unic',
+      'Înlocuirea tuturor angajaților școlii',
+      'Ca aplicația să fie frumoasă',
     ],
     correct: 1,
-    explanation: 'Documentul indică aproximativ 900 de elevi ca principală categorie de utilizatori ai aplicației.',
+    explanation:
+      'Scopul descrie schimbarea utilă pe care o aduce aplicația beneficiarului, nu tehnologia sau o impresie vagă.',
   },
   {
-    question: 'Ce pot face „vizitatorii neautentificați”, conform rolurilor de utilizator din document?',
+    question:
+      'Obiectivul „Cel puțin 50% dintre comenzi se plasează online” nu are un element necesar ca să fie SMART. Care?',
     options: [
-      'Administrează catalogul publicațiilor',
-      'Generează rapoarte statistice',
-      'Consultă catalogul public, fără a putea rezerva',
-      'Rezervă exemplare, dar nu le pot împrumuta',
+      'Un nume al persoanei responsabile de cod',
+      'Culoarea interfeței',
+      'Termenul sau perioada în care valoarea-țintă trebuie atinsă',
+      'Limbajul de programare folosit',
     ],
     correct: 2,
-    explanation: 'Vizitatorii neautentificați pot doar consulta catalogul public, fără drept de rezervare.',
+    explanation:
+      'Un obiectiv SMART este specific, măsurabil, realizabil, relevant și limitat în timp.',
   },
   {
-    question: 'Care lege este citată în document ca temei pentru protecția datelor cititorilor?',
+    question: 'Care este diferența dintre un obiectiv și o cerință într-un caiet de sarcini?',
     options: [
-      'Legea nr. 982/2000 privind accesul la informație',
-      'Legea nr. 142/2023 privind securitatea cibernetică',
-      'Legea nr. 139/2010 privind dreptul de autor',
-      'Legea nr. 133/2011 privind protecția datelor cu caracter personal',
+      'Sunt sinonime și se pot folosi unul în locul celuilalt',
+      'Obiectivul descrie codul, cerința descrie prețul',
+      'Obiectivul îl scrie executantul, cerința îl scrie utilizatorul final',
+      'Obiectivul spune ce rezultat urmărește beneficiarul, iar cerința spune ce trebuie să facă sau cum trebuie să fie aplicația',
     ],
     correct: 3,
-    explanation: 'Legea nr. 133/2011 impune colectarea doar a datelor strict necesare și protejarea istoricului de împrumut.',
+    explanation:
+      'Obiectivele justifică lucrarea (de ce), cerințele detaliază ce se construiește și cum se verifică.',
   },
   {
-    question: 'Ce cerință concretă decurge, în document, din Legea nr. 982/2000 privind accesul la informație?',
+    question:
+      'De ce un caiet de sarcini estimează câți utilizatori are fiecare categorie din publicul-țintă?',
     options: [
-      'Catalogul publicațiilor este consultabil fără autentificare și fără plată',
+      'Pentru a dimensiona corect aplicația (capacitate, performanță) și a prioritiza funcțiile',
+      'Pentru a calcula salariile echipei executante',
+      'Pentru a alege culorile interfeței',
+      'Pentru că este obligatoriu să apară un număr în fiecare capitol',
+    ],
+    correct: 0,
+    explanation:
+      'Numărul și tipul utilizatorilor influențează încărcarea, accesul și funcțiile necesare.',
+  },
+  {
+    question:
+      'Regula spune că doar utilizatorii autentificați pot plasa comenzi. Un vizitator neautentificat apasă „Comandă”. Ce ar trebui să facă aplicația?',
+    options: [
+      'Să plaseze comanda fără date de client',
+      'Să-l ducă la autentificare sau înregistrare, fără a plasa comanda',
+      'Să afișeze o pagină goală',
+      'Să-i acorde automat rol de administrator',
+    ],
+    correct: 1,
+    explanation:
+      'Drepturile rolurilor se aplică mereu: acțiunile permise doar utilizatorilor autentificați cer mai întâi autentificarea.',
+  },
+  {
+    question:
+      'O aplicație colectează date personale de la utilizatori. Ce principiu rezultă pentru cerințele din caietul de sarcini?',
+    options: [
+      'Să se colecteze cât mai multe date, pentru orice eventualitate',
+      'Să fie publicate pentru toți vizitatorii',
+      'Să se colecteze doar datele strict necesare și să fie protejate',
+      'Să nu se mai ceară autentificare',
+    ],
+    correct: 2,
+    explanation:
+      'Protecția datelor personale cere minimizarea datelor colectate și securizarea lor.',
+  },
+  {
+    question:
+      'O lege cere ca informațiile publice ale unei instituții să fie accesibile oricui. Ce cerință rezultă pentru aplicația instituției?',
+    options: [
+      'Toate datele personale să devină publice',
+      'Toate paginile să ceară cont',
+      'Informațiile să fie disponibile doar angajaților',
+      'Secțiunea cu informații publice să poată fi consultată fără autentificare și fără plată',
+    ],
+    correct: 3,
+    explanation: 'O obligație legală se transformă într-o cerință concretă, verificabilă.',
+  },
+  {
+    question:
+      'De ce o cerință de accesibilitate trebuie să indice un standard și un nivel de conformitate, nu doar „aplicația să fie accesibilă”?',
+    options: [
+      'Pentru că astfel cerința devine verificabilă: se poate testa față de criterii clare',
+      'Pentru că standardele fac aplicația mai rapidă',
+      'Pentru că accesibilitatea nu se poate testa niciodată',
+      'Pentru că executantul nu are voie să aleagă soluția',
+    ],
+    correct: 0,
+    explanation:
+      'O formulare vagă nu poate fi acceptată sau respinsă; un standard oferă criterii obiective.',
+  },
+  {
+    question:
+      'Beneficiarul ține evidența într-un fișier de calcul și vrea să treacă la aplicația nouă. Ce ar trebui să prevadă caietul de sarcini?',
+    options: [
+      'Nimic, datele vechi se pierd oricum',
+      'O cerință de migrare a datelor existente, cu un criteriu de verificare (de exemplu numărul de înregistrări preluate fără pierderi)',
+      'Doar cerința ca fișierul să fie șters',
+      'Doar cerința ca aplicația să aibă un logo',
+    ],
+    correct: 1,
+    explanation:
+      'Preluarea datelor existente este o lucrare separată și trebuie specificată și verificată.',
+  },
+  {
+    question: 'De ce enumeră un caiet de sarcini explicit și ce NU include lucrarea?',
+    options: [
+      'Pentru a micșora numărul de cerințe obligatorii',
+      'Pentru că excluderile înlocuiesc criteriile de acceptare',
+      'Pentru a evita așteptările nefondate și cererile suplimentare după semnarea contractului',
+      'Pentru că legea cere o listă de cel puțin zece excluderi',
+    ],
+    correct: 2,
+    explanation:
+      'Limitele lucrării clarifică ce se plătește și ce se livrează, reducând disputele.',
+  },
+  {
+    question:
+      'Regula spune că o rezervare este valabilă 48 de ore, apoi se anulează. Un client nu a ridicat articolul rezervat după 50 de ore. Ce ar trebui să facă sistemul?',
+    options: [
+      'Să păstreze rezervarea nelimitat',
+      'Să șteargă contul clientului',
+      'Să mărească automat termenul la 7 zile',
+      'Să anuleze rezervarea și să facă articolul din nou disponibil',
+    ],
+    correct: 3,
+    explanation:
+      'Fluxul descrie regulile și efectul lor; sistemul trebuie să aplice automat expirarea.',
+  },
+  {
+    question: 'De ce descrierea unui flux de lucru indică ce actor face fiecare pas?',
+    options: [
+      'Pentru a ști cine acționează și ce drepturi are în fiecare pas, ceea ce duce la cerințe și teste precise',
+      'Pentru a stabili salariul fiecărui actor',
+      'Pentru că fluxurile nu pot avea mai mult de un pas',
+      'Pentru a alege limbajul de programare',
+    ],
+    correct: 0,
+    explanation: 'Actorii și pașii leagă procesul de roluri, cerințe și criterii de verificare.',
+  },
+  {
+    question: 'Ce descrie un obiect informațional într-un caiet de sarcini?',
+    options: [
+      'Doar aspectul grafic al unui buton',
+      'O entitate din domeniu (de exemplu comandă sau client), cu atributele ei și legăturile cu alte entități',
+      'Doar viteza serverului',
+      'Doar numele echipei de dezvoltare',
+    ],
+    correct: 1,
+    explanation:
+      'Obiectele informaționale arată ce date gestionează aplicația și cum se leagă între ele.',
+  },
+  {
+    question:
+      'Un site are componentele „Catalog public”, „Cont utilizator” și „Administrare”. În ce componentă se încadrează cerința „administratorul poate importa produse dintr-un fișier CSV”?',
+    options: [
+      'Catalog public',
+      'Cont utilizator',
+      'Administrare',
+      'În niciuna, trebuie să rămână în anexe',
+    ],
+    correct: 2,
+    explanation:
+      'Grupăm cerințele după componenta care le oferă și după rolul care le folosește; importul de conținut ține de administrare.',
+  },
+  {
+    question:
+      'Un client autentificat încearcă să deschidă pagina de administrare introducând direct adresa ei. Ce ar trebui să facă aplicația?',
+    options: [
+      'Să-i permită accesul, fiind autentificat',
+      'Să-i acorde automat rol de administrator',
+      'Să șteargă contul clientului',
+      'Să refuze accesul, pentru că rolul de client nu are dreptul respectiv',
+    ],
+    correct: 3,
+    explanation: 'Drepturile se verifică pe rol, indiferent cum ajunge utilizatorul la pagină.',
+  },
+  {
+    question: 'Ce arată, de regulă, un tabel al drepturilor rolurilor de utilizator?',
+    options: [
+      'Ce acțiuni poate face fiecare rol (rolurile pe o axă, acțiunile pe cealaltă)',
+      'Câți bani primește fiecare rol',
+      'Ce browser folosește fiecare rol',
+      'Data la care a fost creat fiecare cont',
+    ],
+    correct: 0,
+    explanation:
+      'Tabelul-matrice rol x acțiune oferă o imagine clară a permisiunilor și a testelor de acces.',
+  },
+  {
+    question:
+      'Cerința spune că căutarea nu ține cont de diacritice și de majuscule. Utilizatorul scrie „stefanescu”, iar în catalog există „Ștefănescu”. Ce ar trebui să returneze căutarea?',
+    options: [
+      'Niciun rezultat',
+      'Înregistrarea „Ștefănescu”',
+      'Doar rezultatele cu text identic, caracter cu caracter',
+      'O eroare care cere scrierea cu diacritice',
+    ],
+    correct: 1,
+    explanation: 'Cerința este formulată clar tocmai ca să se poată verifica un asemenea caz.',
+  },
+  {
+    question:
+      'Regula spune că un client poate avea cel mult 3 rezervări active. Ana are 3 rezervări active și încearcă a patra. Ce trebuie să facă aplicația?',
+    options: [
+      'Să o accepte și să o șteargă pe prima fără anunț',
+      'Să o accepte fără nicio verificare',
+      'Să refuze a patra rezervare și să explice motivul',
+      'Să blocheze definitiv contul Anei',
+    ],
+    correct: 2,
+    explanation:
+      'Limita dintr-o cerință funcțională trebuie aplicată ca regulă de comportament, cu un mesaj clar.',
+  },
+  {
+    question:
+      'Regula spune că după 5 încercări eșuate de autentificare contul se blochează temporar, 15 minute. Un utilizator greșește parola a cincea oară. Ce trebuie să facă aplicația?',
+    options: [
+      'Să șteargă contul definitiv',
+      'Să permită încercări nelimitate',
+      'Să-i acorde un rol nou',
+      'Să blocheze temporar contul și să informeze utilizatorul',
+    ],
+    correct: 3,
+    explanation: 'Cerințele de securitate descriu un comportament precis, care se poate testa.',
+  },
+  {
+    question:
+      'Regula spune că un împrumut nou se refuză dacă există restanțe mai vechi de 30 de zile. Un elev are o restanță de 45 de zile și cere un împrumut. Ce trebuie să facă aplicația?',
+    options: [
+      'Să refuze împrumutul nou, indicând motivul',
+      'Să acorde împrumutul oricum',
+      'Să șteargă restanța automat',
+      'Să schimbe rolul elevului în administrator',
+    ],
+    correct: 0,
+    explanation:
+      'Condiția (valoarea-prag) este dată în cerință; aplicația o aplică în comportamentul ei.',
+  },
+  {
+    question:
+      'Un administrator importă un fișier cu 100 de linii, dintre care 3 au date invalide. Ce comportament este preferabil într-o cerință bine scrisă?',
+    options: [
+      'Se anulează tot importul, fără explicații',
+      'Se importă liniile valide, iar cele respinse sunt raportate cu motivul respingerii',
+      'Se importă și liniile invalide, cu date greșite',
+      'Se șterg liniile invalide fără raport',
+    ],
+    correct: 1,
+    explanation: 'O cerință bună prevede și cazurile de eroare, nu doar cazul fericit.',
+  },
+  {
+    question:
+      'Ce lipsește din cerința „Aplicația păstrează un jurnal al evenimentelor”, ca să fie verificabilă?',
+    options: [
+      'Culoarea paginii jurnalului',
+      'Numele programatorului',
+      'Perioada de păstrare și cine poate consulta jurnalul',
+      'Prețul licenței bazei de date',
+    ],
+    correct: 2,
+    explanation:
+      'Cerința vagă devine verificabilă când primește valori și limite clare (durată, acces).',
+  },
+  {
+    question:
+      '„Pagina de start se afișează complet în cel mult 3 secunde, la 10 Mbit/s, cu memoria cache goală”. Ce face această cerință verificabilă?',
+    options: [
+      'Faptul că folosește cuvântul „complet”',
+      'Faptul că este scrisă cu majuscule',
+      'Faptul că impune un limbaj de programare',
+      'Valoarea limită împreună cu condițiile de măsurare (viteza conexiunii, cache)',
+    ],
+    correct: 3,
+    explanation:
+      'Fără condițiile de măsurare, aceeași valoare poate da rezultate diferite și devine contestabilă.',
+  },
+  {
+    question:
+      'O cerință de disponibilitate cere 99% pe lună. Ce înseamnă asta, aproximativ, pentru o lună de 30 de zile?',
+    options: [
+      'Aplicația poate fi indisponibilă cel mult aproximativ 7 ore pe lună',
+      'Aplicația poate fi oprită 7 zile pe lună',
+      'Aplicația nu poate fi oprită niciodată',
+      'Aplicația poate fi indisponibilă jumătate din lună',
+    ],
+    correct: 0,
+    explanation:
+      '1% din 30 de zile (720 de ore) este circa 7 ore; procentul trebuie tradus în timp concret pentru a-l putea verifica.',
+  },
+  {
+    question: 'Care dintre următoarele este o cerință de accesibilitate?',
+    options: [
+      'Pagina se încarcă în maximum 3 secunde',
+      'Toate imaginile cu rol informativ au text alternativ pentru cititoarele de ecran',
       'Parolele se păstrează cifrat',
-      'Se publică textul integral al cărților',
-      'Datele personale ale cititorilor devin publice',
-    ],
-    correct: 0,
-    explanation: 'Legea accesului la informație impune ca respectivul catalog să fie liber consultabil, fără autentificare.',
-  },
-  {
-    question: 'Ce standard internațional de accesibilitate este citat în caietul de sarcini al bibliotecii?',
-    options: [
-      'Standardul IEEE 802.11',
-      'Recomandările W3C — WCAG 2.1, nivel AA',
-      'Standardul ISO 9001',
-      'Standardul PCI-DSS',
+      'Serverul are minimum 4 GB de memorie',
     ],
     correct: 1,
-    explanation: 'Documentul citează WCAG 2.1, nivel AA, ca standard de accesibilitate aplicabil.',
+    explanation:
+      'Accesibilitatea urmărește ca aplicația să poată fi folosită și de persoane cu dizabilități.',
   },
   {
-    question: 'Ce constată documentul despre situația curentă a evidenței bibliotecii, înainte de aplicația nouă?',
+    question:
+      'De ce specifică un caiet de sarcini resursele minime ale serverului pe care va fi găzduită aplicația?',
     options: [
-      'Nu există niciun fond de carte fizic',
-      'Bibliotecarul folosește deja un API pentru rapoarte',
-      'Evidența se ține într-un fișier de calcul (XLSX), actualizat manual, iar împrumuturile pe fișe de hârtie',
-      'Evidența este deja complet electronică și publică online',
+      'Pentru ca serverul să fie obligatoriu cât mai scump',
+      'Pentru că resursele determină culorile interfeței',
+      'Pentru ca executantul să dimensioneze și să testeze aplicația pe o infrastructură compatibilă cu cea reală',
+      'Pentru a evita orice testare',
     ],
     correct: 2,
-    explanation: 'Situația curentă descrie un fișier XLSX gestionat manual și fișe de cititor pe hârtie.',
+    explanation:
+      'Cerințele de găzduire previn incompatibilitățile dintre aplicație și infrastructura beneficiarului.',
   },
   {
-    question: 'Ce NU include lucrarea, conform capitolului „Ce include și ce nu include lucrarea”?',
+    question:
+      'Publicul unei aplicații vorbește două limbi. Ce ar trebui să precizeze cerințele tehnice sau de conținut?',
     options: [
-      'Migrarea catalogului existent',
-      'Instruirea personalului',
-      'Testarea aplicației',
-      'Elaborarea unei aplicații mobile native',
+      'Doar limba în care este scris codul sursă',
+      'Că traducerea se face de utilizator',
+      'Nimic, limba nu contează',
+      'Limbile în care este disponibilă interfața și limba implicită',
     ],
     correct: 3,
-    explanation: 'Documentul exclude explicit aplicația mobilă nativă, digitizarea textelor și integrarea cu sisteme de plată.',
+    explanation:
+      'Limbile interfeței sunt o cerință verificabilă, nu un detaliu lăsat la întâmplare.',
   },
   {
-    question: 'Cât durează valabilitatea unei rezervări, conform fluxului „Rezervarea și împrumutul unei publicații”?',
+    question: 'De ce se împarte lucrarea în etape cu livrabile?',
     options: [
-      '48 de ore',
-      '2 ore',
-      '7 zile',
-      '30 de minute',
+      'Pentru a permite recepții intermediare și controlul progresului de către beneficiar',
+      'Pentru a amâna plata la infinit',
+      'Pentru ca beneficiarul să nu mai verifice nimic',
+      'Pentru că o lucrare nu poate avea un singur rezultat final',
     ],
     correct: 0,
-    explanation: 'Rezervarea este valabilă 48 de ore, după care exemplarul revine automat în starea „disponibil”.',
+    explanation: 'Etapele cu livrabile fac progresul vizibil și verificabil pe parcurs.',
   },
   {
-    question: 'Care este termenul implicit de restituire a unui împrumut, conform aceluiași flux?',
+    question: 'Ce este perioada de garanție într-un proiect software?',
     options: [
-      '30 de zile calendaristice',
-      '14 zile calendaristice',
-      '48 de ore',
-      '3 zile lucrătoare',
+      'Perioada de dinaintea semnării contractului',
+      'Perioada după recepția finală în care executantul remediază gratuit defectele apărute',
+      'Perioada în care beneficiarul nu are voie să folosească aplicația',
+      'Perioada de redactare a caietului de sarcini',
     ],
     correct: 1,
-    explanation: 'Termenul implicit de restituire, la eliberarea unui împrumut, este de 14 zile calendaristice.',
+    explanation: 'Garanția protejează beneficiarul după recepție, pentru defectele ascunse.',
   },
   {
-    question: 'Care obiect informațional este descris ca având atributele: titlu, autor(i), editură, an, ISBN, domeniu, limbă, cotă?',
+    question: 'Care dintre următoarele aparține, de regulă, anexelor unui caiet de sarcini?',
     options: [
-      'Cititorul',
-      'Utilizatorul',
-      'Publicația',
-      'Exemplarul',
+      'Semnătura executantului pe fiecare pagină',
+      'Codul sursă integral al aplicației',
+      'Materiale detaliate de referință, precum lista completă a câmpurilor unui formular sau scheme',
+      'Factura finală a lucrării',
     ],
     correct: 2,
-    explanation: 'Publicația este entitatea descrisă o singură dată în catalog, cu aceste atribute bibliografice.',
+    explanation: 'Anexele rețin detaliile voluminoase, ca să nu încarce corpul documentului.',
   },
   {
-    question: 'Câte componente funcționale principale grupează cerințele aplicației „Biblioteca online”?',
+    question: 'Ce legătură ar trebui să existe între corpul caietului de sarcini și anexele sale?',
     options: [
-      'Două componente',
-      'Zece componente',
-      'O singură componentă',
-      'Cinci componente',
+      'Anexele sunt independente și nu se menționează în text',
+      'Anexele înlocuiesc cerințele din document',
+      'Anexele se completează după recepție',
+      'Fiecare anexă este referită din text, în cerința sau secțiunea care o folosește',
     ],
     correct: 3,
-    explanation: 'Documentul grupează cerințele funcționale pe cinci componente: Catalog public, Cont cititor, Gestiune împrumuturi, Administrare, Rapoarte.',
+    explanation:
+      'Referința explicită face ca anexa să facă parte din cerințe și să poată fi verificată.',
   },
   {
-    question: 'Cine poate accesa componenta „Gestiunea împrumuturilor”, conform tabelului componentelor funcționale?',
+    question:
+      'Pentru cerința „comunicația cu aplicația este criptată”, care este un criteriu de acceptare bun?',
     options: [
-      'Bibliotecarul',
-      'Doar vizitatorii neautentificați',
-      'Doar elevii, fără autentificare',
-      'Doar administratorul de rețea',
-    ],
-    correct: 0,
-    explanation: 'Componenta „Gestiunea împrumuturilor” este accesibilă bibliotecarului, care eliberează și înregistrează restituirile.',
-  },
-  {
-    question: 'Conform tabelului drepturilor rolurilor de utilizator, cine poate crea conturi și atribui roluri?',
-    options: [
-      'Vizitatorii neautentificați',
-      'Doar administratorul',
-      'Bibliotecarul și cititorul',
-      'Toți utilizatorii autentificați',
-    ],
-    correct: 1,
-    explanation: 'Numai administratorul are dreptul de a crea conturi și a atribui roluri, conform tabelului 4.2.',
-  },
-  {
-    question: 'Ce cere cerința funcțională CF 01.02 a componentei „Catalogul public”?',
-    options: [
-      'Ca fiecare exemplar să fie fotografiat de bibliotecar',
-      'Ca aplicația să funcționeze doar pe telefon',
-      'Ca rezultatele căutării să fie corecte indiferent de diacritice și de majuscule/minuscule',
-      'Ca fiecare publicație să aibă un video de prezentare',
-    ],
-    correct: 2,
-    explanation: 'CF 01.02 cere ca o interogare precum „stefanescu” să returneze și înregistrările cu „Ștefănescu”.',
-  },
-  {
-    question: 'Câte rezervări active poate avea, simultan, un cititor, conform cerinței CF 02.04?',
-    options: [
-      'Cel mult 10',
-      'O singură rezervare',
-      'Un număr nelimitat',
-      'Cel mult 3',
-    ],
-    correct: 3,
-    explanation: 'CF 02.04 limitează la cel mult 3 rezervări active simultane pentru un cititor.',
-  },
-  {
-    question: 'Ce se întâmplă cu contul unui cititor după 5 încercări eșuate de autentificare în 15 minute, conform CF 02.01?',
-    options: [
-      'Contul se blochează pentru 15 minute',
-      'Contul se șterge definitiv',
-      'Cititorul primește automat un rol nou',
-      'Nu se întâmplă nimic',
-    ],
-    correct: 0,
-    explanation: 'CF 02.01 prevede blocarea contului timp de 15 minute după 5 încercări eșuate în 15 minute.',
-  },
-  {
-    question: 'Pentru cititorii cu restanțe mai vechi de câte zile, aplicația refuză un împrumut nou, conform CF 03.03?',
-    options: [
-      '7 zile',
-      '30 de zile',
-      '3 zile',
-      '365 de zile',
-    ],
-    correct: 1,
-    explanation: 'CF 03.03 refuză un împrumut nou cititorilor cu restanțe mai vechi de 30 de zile.',
-  },
-  {
-    question: 'Ce permite cerința CF 04.02 a componentei de administrare?',
-    options: [
-      'Trimiterea de mesaje SMS către cititori',
-      'Publicarea automată a textului integral al cărților',
-      'Importul publicațiilor dintr-un fișier CSV, cu raport al liniilor respinse și motivul respingerii',
-      'Ștergerea automată a tuturor publicațiilor vechi',
-    ],
-    correct: 2,
-    explanation: 'CF 04.02 descrie importul din CSV, cu raport final al liniilor importate și respinse.',
-  },
-  {
-    question: 'Cât timp se păstrează jurnalul de evenimente, conform cerinței CF 04.04, și cine îl poate consulta?',
-    options: [
-      '30 de zile, consultabil de oricine',
-      '5 ani, consultabil doar de Bibliotecar',
-      'Se păstrează permanent, consultabil public',
-      '12 luni, consultabil doar de Administrator',
-    ],
-    correct: 3,
-    explanation: 'CF 04.04 prevede păstrarea jurnalului 12 luni, consultabil exclusiv de Administrator.',
-  },
-  {
-    question: 'În câte secunde trebuie să se afișeze complet pagina de start, conform cerinței nefuncționale CNF 01?',
-    options: [
-      'Cel mult 3 secunde, la 10 Mbit/s, cu cache gol',
-      'Cel mult 30 de secunde, indiferent de conexiune',
-      'Cel mult 10 minute',
-      'Timpul nu este specificat',
-    ],
-    correct: 0,
-    explanation: 'CNF 01 impune afișarea completă în maximum 3 secunde, la 10 Mbit/s, cu memoria cache goală.',
-  },
-  {
-    question: 'Care este disponibilitatea minimă lunară cerută pentru aplicație, conform CNF 04?',
-    options: [
-      '75% din timp, doar în weekend',
-      '99% din timp, în intervalul 07:00–22:00',
-      '50% din timp, oricând',
-      '100% din timp, fără nicio excepție',
-    ],
-    correct: 1,
-    explanation: 'CNF 04 cere o disponibilitate de cel puțin 99% pe interval, cu mentenanța anunțată din timp.',
-  },
-  {
-    question: 'Care este contrastul minim cerut de cerința de accesibilitate CNF 11, pentru textul obișnuit?',
-    options: [
-      '10:1',
-      '2:1',
-      '4,5:1',
-      '1:1',
-    ],
-    correct: 2,
-    explanation: 'CNF 11 cere un contrast minim de 4,5:1 pentru textul obișnuit, conform WCAG 2.1 AA.',
-  },
-  {
-    question: 'Ce prevede cerința tehnică TEH 03 privind găzduirea aplicației?',
-    options: [
-      'Un server cu un singur nucleu și 512 MB memorie',
-      'Găzduire exclusiv în cloud public, fără control al beneficiarului',
-      'Nicio cerință de resurse minime de server',
-      'Serverul beneficiarului, cu minimum 2 nuclee, 4 GB memorie și 50 GB spațiu de stocare',
-    ],
-    correct: 3,
-    explanation: 'TEH 03 specifică resursele minime ale serverului beneficiarului pe care se instalează aplicația.',
-  },
-  {
-    question: 'Ce limbă este implicită pentru interfața aplicației, conform cerinței tehnice TEH 06?',
-    options: [
-      'Româna',
-      'Rusa',
-      'Engleza',
-      'Franceza',
-    ],
-    correct: 0,
-    explanation: 'TEH 06 stabilește româna ca limbă implicită, cu rusa disponibilă ca a doua limbă.',
-  },
-  {
-    question: 'Câte etape principale sunt definite pentru realizarea aplicației, conform tabelului etapelor și livrabilelor?',
-    options: [
-      '1 etapă unică',
-      '5 etape',
-      '2 etape',
-      '10 etape',
-    ],
-    correct: 1,
-    explanation: 'Documentul definește 5 etape, de la analiză și proiectare până la instruire și recepția finală.',
-  },
-  {
-    question: 'Care este durata garanției acordate după semnarea procesului-verbal de recepție finală?',
-    options: [
-      '5 ani',
-      'Nu se acordă garanție',
-      '12 luni',
-      '1 lună',
-    ],
-    correct: 2,
-    explanation: 'Documentul prevede o garanție de 12 luni de la semnarea recepției finale.',
-  },
-  {
-    question: 'Câte anexe are caietul de sarcini al aplicației „Biblioteca online a colegiului”?',
-    options: [
-      'Nicio anexă',
-      'Două anexe',
-      'Douăzeci de anexe',
-      'Șase anexe (A-F)',
-    ],
-    correct: 3,
-    explanation: 'Documentul are șase anexe, notate A-F, fiecare referită direct din text.',
-  },
-  {
-    question: 'Ce conține Anexa D a caietului de sarcini al bibliotecii?',
-    options: [
-      'Formularul de publicație: lista completă a câmpurilor, tipul și valorile posibile ale listelor de selecție',
-      'Codul sursă complet al aplicației',
-      'Contractul semnat cu executantul',
-      'Fotografiile bibliotecarilor',
-    ],
-    correct: 0,
-    explanation: 'Anexa D detaliază formularul de publicație, cu câmpurile și valorile listelor de selecție.',
-  },
-  {
-    question: 'Cum se verifică, la recepție, îndeplinirea cerinței CNF 07 (securitatea comunicației), conform tabelului criteriilor de acceptare?',
-    options: [
+      'Se accesează mai multe adrese ale aplicației prin HTTP și se verifică redirecționarea automată către HTTPS',
       'Se verifică dacă aplicația are un logo',
-      'Se accesează 5 adrese ale aplicației prin HTTP și se verifică redirecționarea automată către HTTPS',
-      'Se verifică doar culoarea paginii de start',
-      'Se cronometrează timpul de login al administratorului',
-    ],
-    correct: 1,
-    explanation: 'Criteriul de trecere pentru CNF 07 este ca toate cele 5 adrese testate să redirecționeze automat spre HTTPS.',
-  },
-  {
-    question: 'Ce condiție trebuie îndeplinită pentru ca procesul-verbal de recepție să fie semnat, conform capitolului 10?',
-    options: [
-      'Este suficient acordul verbal al beneficiarului',
-      'Este necesară doar aprobarea executantului',
-      'Toate cerințele marcate cu M (obligatorii) trebuie să fie îndeplinite',
-      'Doar jumătate din cerințe trebuie îndeplinite',
-    ],
-    correct: 2,
-    explanation: 'Procesul-verbal se semnează numai dacă toate cerințele obligatorii (M) sunt îndeplinite.',
-  },
-  {
-    question: 'Care este primul capitol al caietului de sarcini real „SIA e-Integritate”, conform cuprinsului prezentat?',
-    options: [
-      'Anexele',
-      'Cerințele nefuncționale',
-      'Fluxurile de lucru',
-      'Informație generală',
-    ],
-    correct: 3,
-    explanation: 'Cuprinsul documentului e-Integritate începe cu capitolul „Informație generală”.',
-  },
-  {
-    question: 'Care este ultimul tip de element din cuprinsul documentului e-Integritate, după capitolul cerințelor nefuncționale?',
-    options: [
-      'Anexele',
-      'Capitolul de informație generală',
-      'Fluxurile de lucru',
-      'Situația curentă',
+      'Se cronometrează încărcarea paginii de start',
+      'Se verifică numărul de pagini ale documentului',
     ],
     correct: 0,
-    explanation: 'După cerințele nefuncționale urmează anexele documentului.',
+    explanation: 'Criteriul descrie un test concret și un rezultat clar de trecere.',
   },
   {
-    question: 'Ce fel de informații conține, de regulă, un capitol despre „situația curentă” a unui sistem, precum cel din e-Integritate?',
+    question: 'Când se poate semni procesul-verbal de recepție finală?',
     options: [
-      'Doar codul sursă al aplicației vechi',
-      'Descrierea a ceea ce există deja înainte de proiect',
-      'Doar prețul final al contractului',
-      'Doar semnăturile părților implicate',
+      'Când beneficiarul își dă acordul verbal',
+      'Când toate cerințele obligatorii sunt îndeplinite conform criteriilor de acceptare',
+      'Când executantul declară că a terminat',
+      'Când jumătate din cerințe sunt îndeplinite',
     ],
     correct: 1,
-    explanation: 'Capitolul „situația curentă” descrie arhitectura și procesele existente înainte de implementarea cerințelor noi.',
+    explanation: 'Recepția se bazează pe verificarea cerințelor obligatorii, nu pe declarații.',
+  },
+  {
+    question:
+      'Într-o cerință apare formularea „aplicația acceptă imagini în formate JPG, PNG etc.”. De ce este problematic cuvântul „etc.”?',
+    options: [
+      'Pentru că face propoziția prea scurtă',
+      'Pentru că lista rămâne deschisă: nu se poate verifica la recepție dacă un format necitat trebuie sau nu acceptat',
+      'Pentru că „etc.” nu poate apărea în documente scrise',
+      'Pentru că impune o soluție tehnică',
+    ],
+    correct: 1,
+    explanation:
+      'O listă deschisă lasă loc interpretării; cerința devine verificabilă doar dacă enumeră explicit toate valorile cerute.',
+  },
+  {
+    question: 'De ce se scriu cerințele nefuncționale separat de cele funcționale?',
+    options: [
+      'Pentru că cele nefuncționale nu se verifică niciodată',
+      'Pentru că cele funcționale sunt mereu opționale',
+      'Pentru că așa cere limbajul de programare',
+      'Pentru că descriu cât de bine funcționează aplicația (performanță, securitate), nu ce funcții are, și se verifică prin alte teste',
+    ],
+    correct: 3,
+    explanation:
+      'Separarea ajută la redactare și la plan de testare: o testare pe funcții, alta pe calitate.',
+  },
+  {
+    question:
+      'În ce capitol al caietului de sarcini se descrie ce există deja la beneficiar (fișiere, procese manuale, sisteme vechi)?',
+    options: [
+      'Situația curentă',
+      'Criteriile de acceptare',
+      'Anexele cu formulare',
+      'Cerințele de documentare',
+    ],
+    correct: 0,
+    explanation:
+      'Situația curentă arată punctul de plecare, ca executantul să înțeleagă ce se schimbă și ce trebuie migrat.',
   },
   {
     question: 'Ce înseamnă, în general, ca o cerință să fie „verificabilă”?',
@@ -780,7 +882,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Să fie scrisă într-un limbaj tehnic complicat',
     ],
     correct: 2,
-    explanation: 'O cerință verificabilă poate fi testată sau demonstrată obiectiv ca fiind îndeplinită sau neîndeplinită.',
+    explanation:
+      'O cerință verificabilă poate fi testată sau demonstrată obiectiv ca fiind îndeplinită sau neîndeplinită.',
   },
   {
     question: 'Care dintre următoarele este un exemplu de cerință funcțională?',
@@ -791,7 +894,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Aplicația permite utilizatorului să își creeze un cont folosind adresa de e-mail',
     ],
     correct: 3,
-    explanation: 'Cerințele funcționale descriu ce face aplicația, cum ar fi crearea unui cont de utilizator.',
+    explanation:
+      'Cerințele funcționale descriu ce face aplicația, cum ar fi crearea unui cont de utilizator.',
   },
   {
     question: 'Care dintre următoarele este un exemplu de cerință nefuncțională?',
@@ -802,7 +906,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Administratorul poate șterge un cont de utilizator',
     ],
     correct: 0,
-    explanation: 'Timpul de încărcare este o cerință nefuncțională, care descrie calitatea, nu funcția în sine.',
+    explanation:
+      'Timpul de încărcare este o cerință nefuncțională, care descrie calitatea, nu funcția în sine.',
   },
   {
     question: 'În general, ce descriu cerințele funcționale ale unei aplicații?',
@@ -813,7 +918,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Cine deține domeniul aplicației',
     ],
     correct: 1,
-    explanation: 'Cerințele funcționale descriu comportamentul și funcțiile concrete pe care aplicația trebuie să le ofere.',
+    explanation:
+      'Cerințele funcționale descriu comportamentul și funcțiile concrete pe care aplicația trebuie să le ofere.',
   },
   {
     question: 'În general, ce descriu cerințele nefuncționale ale unei aplicații?',
@@ -824,10 +930,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Lista exactă a paginilor aplicației',
     ],
     correct: 2,
-    explanation: 'Cerințele nefuncționale nu adaugă funcții noi, ci stabilesc cât de bine funcționează cele existente.',
+    explanation:
+      'Cerințele nefuncționale nu adaugă funcții noi, ci stabilesc cât de bine funcționează cele existente.',
   },
   {
-    question: 'De ce este util ca fiecare cerință dintr-un document de specificații să aibă un identificator unic?',
+    question:
+      'De ce este util ca fiecare cerință dintr-un document de specificații să aibă un identificator unic?',
     options: [
       'Pentru a face documentul mai lung',
       'Pentru că legea impune numerotarea automată a paginilor',
@@ -835,10 +943,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru a putea fi referită ușor și urmărită (trasată) de-a lungul proiectului',
     ],
     correct: 3,
-    explanation: 'Identificatorul unic permite referirea precisă a cerinței în teste, contracte și rapoarte.',
+    explanation:
+      'Identificatorul unic permite referirea precisă a cerinței în teste, contracte și rapoarte.',
   },
   {
-    question: 'Ce problemă apare dacă o cerință conține, în aceeași propoziție, mai multe idei diferite?',
+    question:
+      'Ce problemă apare dacă o cerință conține, în aceeași propoziție, mai multe idei diferite?',
     options: [
       'La verificare, răspunsul poate fi „parțial îndeplinită”, ceea ce face cerința greu de acceptat sau respins clar',
       'Cerința devine automat mai ieftină de implementat',
@@ -846,10 +956,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Nu apare nicio problemă, este o practică recomandată',
     ],
     correct: 0,
-    explanation: 'O cerință cu mai multe idei nu poate fi declarată clar „îndeplinită” sau „neîndeplinită”; trebuie despărțită.',
+    explanation:
+      'O cerință cu mai multe idei nu poate fi declarată clar „îndeplinită” sau „neîndeplinită”; trebuie despărțită.',
   },
   {
-    question: 'De ce nu este recomandat ca o cerință să impună o soluție tehnică fără un motiv real?',
+    question:
+      'De ce nu este recomandat ca o cerință să impună o soluție tehnică fără un motiv real?',
     options: [
       'Pentru că executantul nu știe niciodată ce tehnologii există',
       'Pentru că limitează libertatea executantului de a alege cea mai bună soluție pentru rezultatul cerut',
@@ -857,10 +969,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru că legea interzice menționarea oricărei tehnologii',
     ],
     correct: 1,
-    explanation: 'Cerința bună specifică rezultatul dorit, lăsând executantul liber să aleagă mijlocul tehnic, cu excepția unor motive reale.',
+    explanation:
+      'Cerința bună specifică rezultatul dorit, lăsând executantul liber să aleagă mijlocul tehnic, cu excepția unor motive reale.',
   },
   {
-    question: 'Care dintre următoarele formulări este o cerință funcțională corect scrisă, verificabilă?',
+    question:
+      'Care dintre următoarele formulări este o cerință funcțională corect scrisă, verificabilă?',
     options: [
       'Site-ul trebuie să fie ușor de folosit',
       'Aplicația trebuie să funcționeze bine',
@@ -868,10 +982,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Aplicația trebuie să fie modernă și plăcută',
     ],
     correct: 2,
-    explanation: 'Formularea cu pași concreți și o valoare de timp este verificabilă, spre deosebire de formulările vagi.',
+    explanation:
+      'Formularea cu pași concreți și o valoare de timp este verificabilă, spre deosebire de formulările vagi.',
   },
   {
-    question: 'Ce rol au „rolurile de utilizator” într-un document de cerințe pentru o aplicație Web?',
+    question:
+      'Ce rol au „rolurile de utilizator” într-un document de cerințe pentru o aplicație Web?',
     options: [
       'Stabilesc doar parola implicită a aplicației',
       'Definesc culorile interfeței pentru fiecare utilizator',
@@ -879,10 +995,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Definesc ce categorii de utilizatori există și ce drepturi are fiecare categorie',
     ],
     correct: 3,
-    explanation: 'Rolurile de utilizator (de exemplu vizitator, utilizator înregistrat, administrator) definesc drepturile fiecărei categorii.',
+    explanation:
+      'Rolurile de utilizator (de exemplu vizitator, utilizator înregistrat, administrator) definesc drepturile fiecărei categorii.',
   },
   {
-    question: 'Ce este un „criteriu de acceptare” pentru o cerință dintr-un document de specificații?',
+    question:
+      'Ce este un „criteriu de acceptare” pentru o cerință dintr-un document de specificații?',
     options: [
       'Modul concret prin care se verifică dacă cerința a fost îndeplinită, cu un rezultat clar de trecere',
       'Prețul final agreat pentru acea cerință',
@@ -890,18 +1008,21 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Data la care cerința a fost adăugată în document',
     ],
     correct: 0,
-    explanation: 'Criteriul de acceptare descrie cum se testează o cerință și ce rezultat înseamnă că este îndeplinită.',
+    explanation:
+      'Criteriul de acceptare descrie cum se testează o cerință și ce rezultat înseamnă că este îndeplinită.',
   },
   {
-    question: 'De ce este important ca un document de cerințe să conțină și un tabel de termeni și abrevieri?',
+    question:
+      'Ce trebuie să precizeze caietul de sarcini despre notificările și mesajele generate automat de aplicație (de exemplu e-mailul de confirmare a unei comenzi)?',
     options: [
-      'Pentru a înlocui necesitatea unui glosar separat pe site',
-      'Pentru ca toate părțile implicate să înțeleagă la fel termenii folosiți în document',
-      'Pentru a mări artificial numărul de pagini',
-      'Pentru că fiecare document trebuie să conțină exact 20 de termeni',
+      'Nimic, ele se aleg liber la implementare',
+      'Doar culoarea textului din e-mail',
+      'Când se trimit, cui și ce informații conțin, ca să poată fi verificate la recepție',
+      'Doar numele serviciului de e-mail folosit, fără alte detalii',
     ],
-    correct: 1,
-    explanation: 'Un glosar comun previne neînțelegerile cauzate de folosirea diferită a acelorași cuvinte.',
+    correct: 2,
+    explanation:
+      'Notificările sunt comportament al aplicației; fără eveniment declanșator, destinatar și conținut, nu se poate verifica dacă cerința este îndeplinită.',
   },
   {
     question: 'Ce se înțelege, în general, prin „responsivitatea” unei aplicații Web?',
@@ -912,10 +1033,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Viteza cu care serverul răspunde la o solicitare HTTP',
     ],
     correct: 2,
-    explanation: 'Responsivitatea se referă la adaptarea vizuală a interfeței la diferite lățimi de ecran (telefon, tabletă, desktop).',
+    explanation:
+      'Responsivitatea se referă la adaptarea vizuală a interfeței la diferite lățimi de ecran (telefon, tabletă, desktop).',
   },
   {
-    question: 'Ce reprezintă, în general, un „punct de rupere” (breakpoint) menționat într-o cerință de responsivitate?',
+    question:
+      'Ce reprezintă, în general, un „punct de rupere” (breakpoint) menționat într-o cerință de responsivitate?',
     options: [
       'Un moment în care serverul se defectează',
       'Un punct din cod unde apare o eroare',
@@ -923,21 +1046,25 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'O lățime de ecran la care structura paginii se reorganizează',
     ],
     correct: 3,
-    explanation: 'Punctele de rupere sunt lățimi de ecran prestabilite la care layoutul se adaptează.',
+    explanation:
+      'Punctele de rupere sunt lățimi de ecran prestabilite la care layoutul se adaptează.',
   },
   {
-    question: 'De ce este utilă specificarea unei valori concrete (de exemplu „sub 3 secunde”) pentru o cerință de performanță?',
+    question:
+      'De ce are sens ca un caiet de sarcini să stabilească cine deține domeniul și certificatul de securitate și cât de des se fac copiile de rezervă?',
     options: [
-      'Pentru că permite testarea obiectivă a cerinței la recepție',
-      'Pentru că astfel aplicația devine automat mai rapidă',
-      'Pentru că mărește prețul contractului',
-      'Pentru că este cerută de fiecare browser în parte',
+      'Pentru că aceste aspecte nu pot fi niciodată verificate',
+      'Pentru că astfel se evită disputele după livrare și se asigură recuperarea datelor și continuitatea aplicației',
+      'Pentru că decid aspectul vizual al aplicației',
+      'Pentru că înlocuiesc criteriile de acceptare',
     ],
-    correct: 0,
-    explanation: 'O valoare numerică concretă transformă o dorință vagă într-o cerință măsurabilă și testabilă.',
+    correct: 1,
+    explanation:
+      'Responsabilitățile de găzduire (proprietate, certificate, copii de rezervă) trebuie fixate în scris, altfel apar conflicte și riscul pierderii datelor.',
   },
   {
-    question: 'Ce înseamnă, la un nivel general, „securitatea” unei aplicații Web, ca și categorie de cerințe?',
+    question:
+      'Ce înseamnă, la un nivel general, „securitatea” unei aplicații Web, ca și categorie de cerințe?',
     options: [
       'Designul grafic al interfeței',
       'Ansamblul măsurilor care protejează datele și accesul la aplicație, precum HTTPS și parole cifrate',
@@ -945,7 +1072,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Numărul de pagini publicate pe site',
     ],
     correct: 1,
-    explanation: 'Securitatea acoperă protecția datelor, a comunicației (HTTPS) și a conturilor (parole cifrate).',
+    explanation:
+      'Securitatea acoperă protecția datelor, a comunicației (HTTPS) și a conturilor (parole cifrate).',
   },
   {
     question: 'Ce este HTTPS, în contextul cerințelor de securitate ale unei aplicații Web?',
@@ -967,10 +1095,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Recomandările W3C privind accesibilitatea conținutului Web',
     ],
     correct: 3,
-    explanation: 'WCAG (Web Content Accessibility Guidelines) este setul de recomandări W3C pentru accesibilitatea conținutului Web.',
+    explanation:
+      'WCAG (Web Content Accessibility Guidelines) este setul de recomandări W3C pentru accesibilitatea conținutului Web.',
   },
   {
-    question: 'Ce este un CMS (Content Management System), în contextul cerințelor de administrare a conținutului?',
+    question:
+      'Ce este un CMS (Content Management System), în contextul cerințelor de administrare a conținutului?',
     options: [
       'Un sistem care permite administrarea conținutului printr-o interfață Web, fără cunoștințe de programare',
       'Un limbaj de programare pentru baze de date',
@@ -978,7 +1108,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Un tip de certificat de securitate',
     ],
     correct: 0,
-    explanation: 'CMS-ul permite persoanelor fără cunoștințe tehnice să adauge și să modifice conținutul aplicației.',
+    explanation:
+      'CMS-ul permite persoanelor fără cunoștințe tehnice să adauge și să modifice conținutul aplicației.',
   },
   {
     question: 'De ce este utilă „jurnalizarea” (logarea) evenimentelor într-o aplicație Web?',
@@ -989,10 +1120,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru a înlocui necesitatea parolelor',
     ],
     correct: 1,
-    explanation: 'Jurnalizarea înregistrează automat evenimente relevante, utile pentru securitate și pentru depanare.',
+    explanation:
+      'Jurnalizarea înregistrează automat evenimente relevante, utile pentru securitate și pentru depanare.',
   },
   {
-    question: 'Ce se înțelege, la nivel general, prin „migrarea datelor” într-un proiect de aplicație Web?',
+    question:
+      'Ce se înțelege, la nivel general, prin „migrarea datelor” într-un proiect de aplicație Web?',
     options: [
       'Schimbarea limbii interfeței aplicației',
       'Actualizarea browserului utilizatorului',
@@ -1000,10 +1133,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Mutarea fizică a serverului într-o altă clădire',
     ],
     correct: 2,
-    explanation: 'Migrarea datelor presupune preluarea informațiilor dintr-un sistem vechi (de exemplu un fișier Excel) în noua aplicație.',
+    explanation:
+      'Migrarea datelor presupune preluarea informațiilor dintr-un sistem vechi (de exemplu un fișier Excel) în noua aplicație.',
   },
   {
-    question: 'De ce este important ca un document de cerințe să menționeze și legislația aplicabilă (de exemplu legea privind datele cu caracter personal)?',
+    question:
+      'De ce este important ca un document de cerințe să menționeze și legislația aplicabilă (de exemplu legea privind datele cu caracter personal)?',
     options: [
       'Pentru ca documentul să fie mai lung și mai formal',
       'Pentru că fiecare aplicație trebuie să citeze cel puțin 10 legi',
@@ -1011,10 +1146,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru că anumite cerințe sunt obligatorii prin lege și nu pot fi negociate',
     ],
     correct: 3,
-    explanation: 'Legislația în vigoare impune cerințe obligatorii, indiferent de preferințele beneficiarului sau executantului.',
+    explanation:
+      'Legislația în vigoare impune cerințe obligatorii, indiferent de preferințele beneficiarului sau executantului.',
   },
   {
-    question: 'Ce se înțelege prin „publicul-țintă” al unei aplicații Web, într-un document de cerințe?',
+    question:
+      'Ce se înțelege prin „publicul-țintă” al unei aplicații Web, într-un document de cerințe?',
     options: [
       'Categoriile de utilizatori cărora li se adresează aplicația',
       'Prețul de vânzare al aplicației',
@@ -1022,7 +1159,8 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Limbajul de programare folosit',
     ],
     correct: 0,
-    explanation: 'Publicul-țintă descrie cine va folosi aplicația (de exemplu elevi, profesori, administratori).',
+    explanation:
+      'Publicul-țintă descrie cine va folosi aplicația (de exemplu elevi, profesori, administratori).',
   },
   {
     question: 'De ce se recomandă ca obiectivele unei aplicații să fie „măsurabile”?',
@@ -1033,21 +1171,24 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru că altfel aplicația nu poate fi lansată',
     ],
     correct: 1,
-    explanation: 'Un obiectiv măsurabil poate fi verificat obiectiv după o perioadă stabilită, spre deosebire de o dorință vagă.',
+    explanation:
+      'Un obiectiv măsurabil poate fi verificat obiectiv după o perioadă stabilită, spre deosebire de o dorință vagă.',
   },
   {
     question: 'Care dintre următoarele este un exemplu de obiectiv NEmăsurabil, formulat greșit?',
     options: [
       'Timpul mediu de livrare scade la 2 minute',
-      'Fondul de carte de minimum 5000 de titluri este consultabil online',
+      'Cel puțin 80% dintre cereri se depun online în 6 luni',
       'Aplicația trebuie să fie modernă și ușor de utilizat',
       'Cel puțin 60% dintre comenzi se plasează online în 6 luni',
     ],
     correct: 2,
-    explanation: 'Formularea „modernă și ușor de utilizat” nu poate fi verificată obiectiv, spre deosebire de celelalte, care au valori concrete.',
+    explanation:
+      'Formularea „modernă și ușor de utilizat” nu poate fi verificată obiectiv, spre deosebire de celelalte, care au valori concrete.',
   },
   {
-    question: 'Ce este, în general, un „livrabil” (deliverable) într-un proiect de dezvoltare software?',
+    question:
+      'Ce este, în general, un „livrabil” (deliverable) într-un proiect de dezvoltare software?',
     options: [
       'Un tip de eroare de programare depistată la testare',
       'Un utilizator care testează aplicația înainte de lansare',
@@ -1055,10 +1196,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Un rezultat concret predat beneficiarului la finalul unei etape, de exemplu o machetă sau o aplicație funcțională',
     ],
     correct: 3,
-    explanation: 'Livrabilul este rezultatul tangibil, predat beneficiarului la finalul unei etape a proiectului.',
+    explanation:
+      'Livrabilul este rezultatul tangibil, predat beneficiarului la finalul unei etape a proiectului.',
   },
   {
-    question: 'De ce este utilă menționarea unui număr de versiune (de exemplu 1.0) pe un document de cerințe?',
+    question:
+      'De ce este utilă menționarea unui număr de versiune (de exemplu 1.0) pe un document de cerințe?',
     options: [
       'Pentru a putea distinge și urmări modificările ulterioare ale documentului',
       'Pentru a stabili prețul final al contractului',
@@ -1066,21 +1209,25 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Pentru ca documentul să devină automat valabil legal',
     ],
     correct: 0,
-    explanation: 'Numărul de versiune permite urmărirea modificărilor aduse documentului de-a lungul timpului.',
+    explanation:
+      'Numărul de versiune permite urmărirea modificărilor aduse documentului de-a lungul timpului.',
   },
   {
-    question: 'Ce se înțelege, în general, prin „domeniul de aplicare” (scope) al unui proiect software?',
+    question:
+      'Aplicația trebuie să se integreze cu sistemul de e-mail al instituției. Ce ar trebui să precizeze, minimum, cerința de integrare?',
     options: [
-      'Bugetul total alocat proiectului',
-      'Limitele a ceea ce este inclus și a ceea ce nu este inclus în proiect',
-      'Limbajul de programare ales de executant',
-      'Numărul total de utilizatori ai aplicației',
+      'Doar cuvântul „integrare”, restul stabilește executantul',
+      'Ce sistem extern, ce date se transmit, în ce direcție și ce face aplicația dacă sistemul extern nu răspunde',
+      'Doar culoarea butonului de trimitere',
+      'Doar prețul licenței sistemului extern',
     ],
     correct: 1,
-    explanation: 'Domeniul de aplicare stabilește clar ce include și ce exclude proiectul, evitând neînțelegerile ulterioare.',
+    explanation:
+      'O integrare se verifică doar dacă sunt clare partenerul, datele, sensul schimbului și comportamentul la eroare.',
   },
   {
-    question: 'Care este diferența principală dintre o cerință și soluția tehnică prin care aceasta se implementează?',
+    question:
+      'Care este diferența principală dintre o cerință și soluția tehnică prin care aceasta se implementează?',
     options: [
       'Cerința este întotdeauna scrisă de executant, iar soluția de beneficiar',
       'Soluția tehnică se scrie întotdeauna înaintea cerinței, în document',
@@ -1088,10 +1235,12 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Nu există nicio diferență, cei doi termeni fiind sinonimi',
     ],
     correct: 2,
-    explanation: 'O cerință bine scrisă cere un rezultat, lăsând soluția tehnică la alegerea executantului.',
+    explanation:
+      'O cerință bine scrisă cere un rezultat, lăsând soluția tehnică la alegerea executantului.',
   },
   {
-    question: 'Ce se înțelege, la nivel general, printr-un „beneficiar” într-un proiect de dezvoltare a unei aplicații Web?',
+    question:
+      'Ce se înțelege, la nivel general, printr-un „beneficiar” într-un proiect de dezvoltare a unei aplicații Web?',
     options: [
       'Persoana care scrie codul sursă al aplicației',
       'Firma care găzduiește serverul aplicației',
@@ -1099,6 +1248,7 @@ export const CAIET_SARCINI_QUESTIONS: Question[] = [
       'Persoana sau instituția care comandă și recepționează aplicația',
     ],
     correct: 3,
-    explanation: 'Beneficiarul este partea care comandă lucrarea și o recepționează la final, spre deosebire de executant, care o realizează.',
+    explanation:
+      'Beneficiarul este partea care comandă lucrarea și o recepționează la final, spre deosebire de executant, care o realizează.',
   },
 ];

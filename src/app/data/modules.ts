@@ -136,7 +136,7 @@ export const EXAMS: QuizModule[] = [
     name: 'Examen 20.10',
     short: '20.10',
     description:
-      'Temele 1–7, cu accent pe caietul de sarcini „Biblioteca online a colegiului”: 70% întrebări noi despre cerințe.',
+      'Temele 1–7, cu accent pe caietul de sarcini: 70% întrebări noi despre cerințe și structura documentului.',
     color: '#b91c1c',
     includes: ['internet-http', 'browsere-securitate', 'aplicatii-web', 'caiet-sarcini', 'prototipare'],
     featured: { questions: CAIET_SARCINI_NOU_QUESTIONS, share: 0.7, source: 'caiet-sarcini' },

@@ -61,8 +61,10 @@ export class QuizService {
 
     const questions: SessionQuestion[] = picked.map(({ index, source }) => {
       const q = module.questions[index];
-      // amestecăm variantele, dar ținem minte unde a ajuns cea corectă
-      const order = shuffle(q.options.map((_, i) => i));
+      // amestecăm variantele, dar ținem minte unde a ajuns cea corectă;
+      // la Adevărat/Fals păstrăm ordinea, ca „Adevărat” să fie mereu primul
+      const indexes = q.options.map((_, i) => i);
+      const order = q.options.length === 2 ? indexes : shuffle(indexes);
       return {
         index,
         source,
