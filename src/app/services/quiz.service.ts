@@ -193,8 +193,14 @@ export class QuizService {
       }));
     }
 
+    // Examen cu întrebări prioritare: `share` din test vine din setul prioritar (primele
+    // `size` întrebări), restul se împarte egal între modulele incluse
+    const featured = module.featured;
+    const featuredCount = featured ? Math.min(featured.size, Math.round(count * featured.share)) : 0;
+    const featuredPool = featured ? Array.from({ length: featured.size }, (_, i) => i) : [];
+
     // Pentru examen: fiecare modul inclus ocupă un „interval” de indexuri în lista comună
-    let offset = 0;
+    let offset = featured?.size ?? 0;
     const parts = module.includes.map((id) => {
       const size = findModule(id)?.questions.length ?? 0;
       const part = { id, pool: Array.from({ length: size }, (_, i) => offset + i) };
@@ -203,8 +209,9 @@ export class QuizService {
     });
 
     // împărțim egal; restul (dacă nu se împarte exact) merge la module alese random
-    const base = Math.floor(count / parts.length);
-    const extra = new Set(shuffle(parts.map((_, i) => i)).slice(0, count % parts.length));
+    const rest = count - featuredCount;
+    const base = Math.floor(rest / parts.length);
+    const extra = new Set(shuffle(parts.map((_, i) => i)).slice(0, rest % parts.length));
 
     const result = parts.flatMap((part, i) => {
       const n = base + (extra.has(i) ? 1 : 0);
@@ -213,6 +220,17 @@ export class QuizService {
         source: part.id,
       }));
     });
+
+    if (featured) {
+      // dacă modulele vechi nu au destule întrebări, completăm tot din setul prioritar
+      const n = Math.min(featured.size, featuredCount + (rest - result.length));
+      result.push(
+        ...this.pickFromPool(module.id, featuredPool, n).map((index) => ({
+          index,
+          source: featured.source,
+        })),
+      );
+    }
     return shuffle(result);
   }
 

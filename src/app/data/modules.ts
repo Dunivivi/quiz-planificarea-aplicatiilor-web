@@ -1,7 +1,9 @@
+import { Question } from '../models/question';
 import { QuizModule } from '../models/quiz';
 import { APLICATII_WEB_QUESTIONS } from './aplicatii-web.questions';
 import { BROWSERE_SECURITATE_QUESTIONS } from './browsere-securitate.questions';
 import { CAIET_SARCINI_QUESTIONS } from './caiet-sarcini.questions';
+import { CAIET_SARCINI_NOU_QUESTIONS } from './caiet-sarcini-nou.questions';
 import { HTML_STRUCTURA_QUESTIONS } from './html-structura.questions';
 import { INTERFATA_NAVIGARE_QUESTIONS } from './interfata-navigare.questions';
 import { INTERNET_HTTP_QUESTIONS } from './internet-http.questions';
@@ -107,13 +109,38 @@ export const MODULES: QuizModule[] = [
 ];
 
 /** Creează un examen din mai multe module de bază. */
-function exam(def: Omit<QuizModule, 'questions'> & { includes: string[] }): QuizModule {
+function exam(
+  def: Omit<QuizModule, 'questions' | 'featured'> & {
+    includes: string[];
+    /** Întrebări prioritare: vin primele în listă și ocupă proporția `share` din test. */
+    featured?: { questions: Question[]; share: number; source: string };
+  },
+): QuizModule {
+  const { featured, ...rest } = def;
   const parts = def.includes.map((id) => MODULES.find((m) => m.id === id)!);
-  return { ...def, questions: parts.flatMap((m) => m.questions) };
+  return {
+    ...rest,
+    questions: [...(featured?.questions ?? []), ...parts.flatMap((m) => m.questions)],
+    featured: featured && {
+      size: featured.questions.length,
+      share: featured.share,
+      source: featured.source,
+    },
+  };
 }
 
 /** Examenele combină mai multe module; întrebările se împart egal între ele. */
 export const EXAMS: QuizModule[] = [
+  exam({
+    id: 'exam-20-10',
+    name: 'Examen 20.10',
+    short: '20.10',
+    description:
+      'Temele 1–7, cu accent pe caietul de sarcini „Biblioteca online a colegiului”: 70% întrebări noi despre cerințe.',
+    color: '#b91c1c',
+    includes: ['internet-http', 'browsere-securitate', 'aplicatii-web', 'caiet-sarcini', 'prototipare'],
+    featured: { questions: CAIET_SARCINI_NOU_QUESTIONS, share: 0.7, source: 'caiet-sarcini' },
+  }),
   exam({
     id: 'exam-29-09',
     name: 'Examen 29.09',

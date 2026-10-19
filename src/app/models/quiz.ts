@@ -15,6 +15,12 @@ export interface QuizModule {
    * Întrebările examenului sunt întrebările acestor module, puse una după alta.
    */
   includes?: string[];
+  /**
+   * Doar pentru examene cu întrebări prioritare: primele `size` întrebări din `questions`
+   * formează setul prioritar, din care vine proporția `share` a testului (ex: 0.7 = 70%).
+   * Ele sunt afișate ca făcând parte din modulul `source`.
+   */
+  featured?: { size: number; share: number; source: string };
 }
 
 /** O întrebare din testul în desfășurare (cu variantele deja amestecate). */

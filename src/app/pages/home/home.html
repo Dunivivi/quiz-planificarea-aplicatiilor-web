@@ -259,7 +259,9 @@
       <div class="setup__footer">
         <p class="muted setup__hint">
           <strong>{{ count() }}</strong> întrebări din {{ m.questions.length }} ·
-          @if (perPart(); as pp) {
+          @if (featuredCount()) {
+            {{ featuredCount() }} noi despre caietul de sarcini + câte {{ perPart() }} din fiecare modul ·
+          } @else if (perPart(); as pp) {
             câte {{ pp }} din fiecare modul ·
           }
           {{ unseen(m) }} nevăzute încă ·

@@ -42,8 +42,15 @@ export class Home {
   protected readonly perPart = computed(() => {
     const parts = this.selected()?.includes?.length;
     if (!parts) return null;
-    const base = Math.floor(this.count() / parts);
-    return this.count() % parts ? `${base}–${base + 1}` : `${base}`;
+    const rest = this.count() - this.featuredCount();
+    const base = Math.floor(rest / parts);
+    return rest % parts ? `${base}–${base + 1}` : `${base}`;
+  });
+
+  /** La examenele cu întrebări prioritare: câte vin din setul prioritar. */
+  protected readonly featuredCount = computed(() => {
+    const f = this.selected()?.featured;
+    return f ? Math.min(f.size, Math.round(this.count() * f.share)) : 0;
   });
 
   private readonly setupPanel = viewChild<ElementRef<HTMLElement>>('setup');
