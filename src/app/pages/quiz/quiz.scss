@@ -76,6 +76,9 @@
 }
 
 .question {
+  // URL-urile și cuvintele foarte lungi trec pe rândul următor, nu ies din ecran
+  overflow-wrap: anywhere;
+
   position: relative;
   overflow: hidden;
 
